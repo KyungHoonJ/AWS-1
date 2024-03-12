@@ -1,0 +1,46 @@
+#calculator {
+  max-width: 1000px;
+}
+
+span {
+  border: 1px solid black;
+  background-color: gray;
+  color: white;
+  padding: 16px;
+  border-radius: 16px;
+  flex: 1;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 16px;
+}
+
+.col3 {
+  flex: 3;
+}
+.col1 {
+  flex: 1;
+}
+.col2 {
+  flex: 2;
+}
+
+#result {
+  background-color: white;
+  color: black;
+}
+
+span.on {
+  background-color: black;
+}
