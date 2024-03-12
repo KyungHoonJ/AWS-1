@@ -1,0 +1,56 @@
+<html lang="ko">
+  <!-- doc : 자동완성 -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="calculator" class="flex-col">
+      <div class="flex-row">
+        <span id="result">0</span>
+      </div>
+      <div class="flex-row">
+        <span id="reset">AC</span>
+        <span id="divide">/</span>
+        <span id="multiple">*</span>
+        <span id="minus">-</span>
+      </div>
+      <div class="flex-row">
+        <div class="col3 flex-col">
+          <div class="flex-row">
+            <span id="num-7">7</span>
+            <span id="num-8">8</span>
+            <span id="num-9">9</span>
+          </div>
+          <div class="flex-row">
+            <span id="num-4">4</span>
+            <span id="num-5">5</span>
+            <span id="num-6">6</span>
+          </div>
+        </div>
+        <div class="flex-row col1">
+          <span id="plus">+</span>
+        </div>
+      </div>
+      <div class="flex-row">
+        <div class="col3 flex-col">
+          <div class="flex-row">
+            <span id="num-1">1</span>
+            <span id="num-2">2</span>
+            <span id="num-3">3</span>
+          </div>
+          <div class="flex-row">
+            <span id="num-0" class="col2">0</span>
+            <span id="dot">.</span>
+          </div>
+        </div>
+        <div class="flex-row col1">
+          <span id="equal">=</span>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

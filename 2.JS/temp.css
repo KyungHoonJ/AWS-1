@@ -1,0 +1,4 @@
+.student-list th,
+.student-list td {
+  border: 1px solid black;
+}

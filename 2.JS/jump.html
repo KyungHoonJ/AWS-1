@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>목표는 점프킹?</title>
+        <style>
+            body {
+                margin:0;
+            }
+
+            #player {
+                background-color: blue;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+            }
+
+            #bottom {
+                background-color: brown;
+                width: 100%;
+                height: 100px;
+                position: absolute;
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="map">
+            <div id="player">P</div>
+            <div id="bottom"></div>
+        </div>
+        <script>
+            const player = {
+                x: 10,
+                y: 500,
+                g: 0,
+                isG: false,
+                arrowX: 0,
+            };
+            const playerElem = document.getElementById('player');
+            playerElem.style.bottom = player.y + 'px';
+            playerElem.style.left = player.x + 'px';
+            setInterval(()=>{
+                if(player.y - player.g > 100) {
+                    player.g += 0.98;
+                    player.y -= player.g
+                } else if(player.y - player.g < 100) {
+                    player.y = 100;
+                    player.g = 0;
+                    player.isG = true;
+                }
+                playerElem.style.bottom = player.y + 'px';
+                player.x += player.arrowX;
+                playerElem.style.left = player.x + 'px';
+            }, 10)
+            document.body.onkeydown = (e)=>{
+                if(player.isG && e.code == 'Space') {
+                    player.g -= 30;
+                    player.isG = false;
+                }
+                if(e.code == 'ArrowRight') {
+                    if(player.arrowX < 3){
+                        player.arrowX += 1; 
+                    }
+                }
+                if(e.code == 'ArrowLeft'){
+                    player.arrowX = -1; 
+                }
+            }
+            document.body.onkeyup = ({code})=>{
+                if(code == 'ArrowRight' || code == 'ArrowLeft') {
+                    player.arrowX = 0; 
+                }
+            }
+        </script>
+    </body>
+</html>

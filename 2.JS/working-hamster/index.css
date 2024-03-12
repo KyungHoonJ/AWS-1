@@ -1,0 +1,12 @@
+.working {
+  width: 32px;
+  height: 33px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 387/260 */
+img {
+  width: 387px;
+  position: absolute;
+}

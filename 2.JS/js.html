@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <!-- <script>
+            // document.write(1 + 1);
+            // document.write(1 - 1);
+            // document.write(1 * 1);
+            // document.write(1 / 1);
+            // 변수
+            // var age = 1;
+            // document.write(age);
+            // var age = 2;
+            // document.write(age);
+            
+            // let a = 1;
+            // document.write(a);
+            // a = 2;
+            // document.write(a);
+
+            // let b;
+            // b = 5;
+            // document.write(b);
+
+            const c = '10';
+            document.write(c);
+            // var, let, const
+        </script>
+        <script>
+            document.write(1 == 1);
+            document.write(1 <= 2);
+            document.write(1 >= 2);
+            document.write(1 != 1);
+            document.write(true);
+            document.write(false);
+            document.write(1 === '1');
+            document.write(1 <= '2');
+            document.write(1 >= '2');
+            document.write(1 !== '1');
+
+            let a = 1;
+            document.write(a);
+            a = +'1';
+            document.write(a + 2);
+            // a = a + '';
+            a = a.toString();
+            // css -> background-color << kebab
+            // id, class -> user_name << snake
+            // js -> toString << camel
+            // React -> ToString << pascal
+            // X -> strToString << 헝가리안 표기법
+
+            // Type << 자료형 (원시 자료형)
+            // String << 문자열, 글자, 문자
+            // Number << 숫자 1, 2, 3
+            // Boolean << 참거짓, true, false
+            // undefined << 값을 설정하지 않은 빈값
+            // null << 빈값
+            // Symbol
+            var aa = null;
+            document.write(aa);
+
+            let num = 1;
+            num = num + 3;
+            num += 3;
+            num = 2 * 2 * 2;
+            num = 2 ** 3;
+            document.write(num);
+            num **= 3;
+            document.write(num);
+            Math.PI;
+            // 5 % 3 -> 2
+            0b1001;
+            document.write('<br>');
+            document.write(0b1001 >> 1);
+            // 1 0 0 1
+            // 8 4 2 1
+            0x234;
+            num = 1;
+            document.write('<br>');
+            document.write(num++);
+            document.write('<br>');
+            document.write(++num);
+
+            // 82 번줄 해석
+            document.write(num);
+            num += 1;
+            
+            ++num;
+            document.write(num);
+            
+            // 84 번줄 해석
+            num += 1;
+            document.write('<br>');
+            document.write(num);
+
+            
+            // document.write(1 + ++num * 3 % 5);
+        </script>
+        <script>
+            
+            document.write('<br>');
+            num = 2;
+            if(3 > num || (num > 5 && num1 != 4)) {
+                document.write(num * 10);
+            } else if(num == 4) {
+                document.write(num * 5);
+            } else {
+                document.write(num);
+            }
+            let num1;
+            (1 + 1) * 2;
+        </script> -->
+        <script>            
+            // 컴퓨터가 숫자를 뽑자
+            const comNum = Math.random();
+            console.log(comNum);
+
+            // 컴퓨터의 숫자에 대해서 가위바위보를 정하자
+            let comInput;
+            if(comNum < 0.3333) {
+                comInput = '가위';
+            } else if(comNum < 0.6666) {
+                comInput = '바위';
+            } else {
+                comInput = '보';
+            }
+            console.log('comInput : ' + comInput);
+            
+            // 유저 입력
+            let userInput = prompt("가위 바위 보");
+            if(userInput == '가위' && comInput == '가위') {
+                console.log('컴퓨터랑 비기냐?');
+            } else if(userInput == '가위' && comInput == '바위') {
+                console.log('쯧쯧');
+            } else if(userInput == '가위' && comInput == '보') {
+                console.log('한판은 의미없어.');
+            } else if(userInput == '바위' && comInput == '가위') {
+                console.log('한판은 의미없어.');
+            } else if(userInput == '바위' && comInput == '바위') {
+                console.log('컴퓨터랑 비기냐?');
+            } else if(userInput == '바위' && comInput == '보') {
+                console.log('쯧쯧');
+            }else if(userInput == '보' && comInput == '가위') {
+                console.log('쯧쯧');
+            } else if(userInput == '보' && comInput == '바위') {
+                console.log('한판은 의미없어.');
+            } else if(userInput == '보' && comInput == '보') {
+                console.log('컴퓨터랑 비기냐?');
+            } else {
+                console.log('입력은 제대로');
+            }
+        </script>
+    </body>
+</html>

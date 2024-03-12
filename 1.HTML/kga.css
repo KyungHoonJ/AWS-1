@@ -1,0 +1,296 @@
+ul div, ol div {
+    display: list-item;
+}
+
+
+.flex-container {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    height: 500px;
+    flex-wrap: wrap;
+}
+
+.h-btn {
+    font-size: 32px;
+    color:white;
+    background-color: black;
+    border-radius: 16px;
+    width: 400px;
+    text-align: center;
+    padding: 32px 0;
+    /* display: inline-block; */
+    /* float: right; */
+    /* flex: 1; */
+    /* height: 150px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.b1{
+    align-self: flex-start;
+}
+.b2{
+    align-self: center;
+}
+.b3{
+    align-self: flex-end;
+}
+
+.c-red {
+    font-size:50px;
+    font-weight: 700;
+}
+
+.o-1{
+    color:red;
+    opacity: 0.3;
+}
+
+.o-2{
+    color: rgba(255, 0, 0, 0.3);
+}
+
+.red-child{
+    color:black;
+}
+
+th, td {
+    padding: 8px 16px;
+}
+
+.slide {
+    height: calc(64px * 3 + 48px * 2);
+    overflow: hidden;
+    background-color: aqua;
+    position: sticky;
+    top: 100px;
+    z-index: 10;
+}
+
+/* @keyframes slide {
+    0% {
+        opacity: 0;
+        top:0;
+    }
+    30% {
+        opacity: 1;
+        color: red;
+        top:-48px;
+    }
+    70% {
+        opacity: 1;
+        color: blue;
+        top: -48px;
+    }
+    100% {
+        opacity: 0;
+        top: 0;
+    }
+} */
+
+.slide-item {
+    font-size:48px;
+    /* height: 64px; */
+    position: relative;
+    top: -48px;
+    /* left: 48px; */
+    /* animation: 2s slide infinite; */
+}
+
+@keyframes slide {
+    0%{
+        transform: translateY(0);
+    }
+    23%{
+        transform: translateY(-112px);
+    }
+    33%{
+        transform: translateY(-112px);
+    }
+    56%{
+        transform: translateY(-224px);
+    }
+    66%{
+        transform: translateY(-224px);
+    }
+    90%{
+        transform: translateY(-336px);
+    }
+    100%{
+        transform: translateY(-336px);
+    }
+}
+
+.slide-item {
+    animation: slide 5s infinite;
+}
+
+@keyframes slide1 {
+    0%{
+        opacity: 0.3;
+    }
+    23%{
+    }
+    33%{
+    }
+    56%{
+    }
+    66%{
+    }
+    90%{
+    }
+    100%{
+        opacity: 0.3;
+    }
+}
+
+.slide-item:nth-child(1) {
+    animation: slide 5s infinite, slide1 5s infinite;
+}
+
+@keyframes slide2 {
+    0%{
+        opacity: 1;
+    }
+    23%{
+        opacity: 0.3;
+    }
+    33%{
+    }
+    56%{
+    }
+    66%{
+    }
+    90%{
+    }
+    100%{
+        opacity: 0.3;
+    }
+}
+
+.slide-item:nth-child(2) {
+    animation: slide 5s infinite, slide2 5s infinite;
+}
+
+@keyframes slide3 {
+    0%{
+        opacity: 0.3;
+    }
+    23%{
+        opacity: 1;
+    }
+    33%{
+        opacity: 1;
+    }
+    56%{
+        opacity: 0.3;
+    }
+    66%{
+    }
+    90%{
+    }
+    100%{
+        opacity: 0.3;
+    }
+}
+
+.slide-item:nth-child(3) {
+    animation: slide 5s infinite, slide3 5s infinite;
+}
+
+@keyframes slide4 {
+    0%{
+        opacity: 0.3;
+    }
+    23%{
+    }
+    33%{
+        opacity: 0.3;
+    }
+    56%{
+        opacity: 1;
+    }
+    66%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 0.3;
+    }
+}
+
+.slide-item:nth-child(4) {
+    animation: slide 5s infinite, slide4 5s infinite;
+}
+
+@keyframes slide5 {
+    0%{
+        opacity: 0.3;
+    }
+    23%{
+    }
+    33%{
+    }
+    56%{
+    }
+    66%{
+        opacity: 0.3;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.slide-item:nth-child(5) {
+    animation: slide 5s infinite, slide5 5s infinite;
+}
+.slide-item:nth-child(6) {
+    animation: slide 5s infinite, slide1 5s infinite;
+}
+
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1300px;
+}
+
+.card {
+    min-width: 400px;
+    width: 400px;
+    height: 300px;
+    background-color: blueviolet;
+    position: relative;
+}
+
+.card .before {
+    width: 400px;
+    height: 300px;
+    background-color: beige;
+    box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.3) inset;
+}
+
+.card .after {
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    box-shadow: 10px 10px 20px black;
+    transition: all 0.5s;
+}
+
+.card:hover .after {
+    opacity: 1;
+    /* left: 100px; */
+}
