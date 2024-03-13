@@ -113,3 +113,97 @@
 
 - URL : 주소
 - test=1&a=3&name=정경훈
+
+# 설치
+
+- Ubuntu에서
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install mysql-server -y
+```
+
+- mac의 terminal에서
+
+```bash
+brew update
+brew upgrade
+brew install mysql
+```
+
+# 상태 확인
+
+- Ubuntu에서
+
+```bash
+sudo service mysql status
+```
+
+- mac의 terminal에서
+
+```bash
+mysql.server status
+```
+
+# 시작
+
+- Ubuntu에서
+
+```bash
+sudo service mysql start
+```
+
+- mac의 terminal에서
+
+```bash
+mysql.server start
+```
+
+# mySQL 기본 설정
+
+```bash
+mysql_secure_installation
+```
+
+# mySQL 접속
+
+```bash
+sudo mysql -u root -p
+```
+
+# root 계정의 비밀번호 변경
+
+- Ubuntu에서
+
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234qwer';
+```
+
+- mac의 terminal에서
+
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED BY '1234qwer';
+```
+
+# mysql 종료
+
+```sql
+exit
+```
+
+# UbuntuRoot
+
+# 상태 확인
+
+- Ubuntu에서
+
+```bash
+
+```
+
+- mac의 terminal에서
+
+```bash
+
+```
