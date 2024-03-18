@@ -28,6 +28,7 @@
   - Variable Environment의 내용을 Lexical Environment의 Environment Record(통칭 Record)에 복사한다.
 - Outer Lexical Environment를 설정한다.
   - 외부 Lexical Environment가 무엇인지 Reference를 할당한다.
+- ThisBinding을 통해 this 변수를 할당한다.
 
 # 인터페이스 구현
 

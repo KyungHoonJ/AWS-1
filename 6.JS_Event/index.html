@@ -16,7 +16,66 @@
       let a = 1;
       var b = 2;
       function c() {}
-      let d = () => {};
+      let d = () => {
+        let a = 3;
+        console.log(this);
+        console.log(a);
+      };
+      d();
+
+      function e() {
+        e();
+      }
+      //   e();
+
+      const f = {
+        a: 1,
+        b: 2,
+        c: function () {
+          console.log(this);
+          const d = {
+            getThis: () => {
+              console.log(this);
+            },
+          };
+          d.getThis();
+        },
+        d: () => {
+          console.log(this);
+        },
+      };
+      f.c();
+      f.d();
+
+      // `` // 템플릿 리터럴(백틱)
+
+      class Test {
+        constructor() {}
+        a = function () {
+          console.log(this);
+        };
+        b = () => {
+          console.log(this);
+        };
+      }
+
+      const test = new Test();
+      test.a();
+      test.b();
+
+      function TestF() {
+        this.a = function () {
+          console.log(this);
+        };
+        this.b = () => {
+          console.log(this);
+        };
+      }
+      const TestFF = () => {
+        this.a = function () {
+          console.log(this);
+        };
+      };
     </script>
   </body>
 </html>
