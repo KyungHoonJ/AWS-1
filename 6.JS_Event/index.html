@@ -76,6 +76,27 @@
           console.log(this);
         };
       };
+
+      const funcA = () => {
+        console.log(this);
+      };
+      const funcB = () => {
+        funcA();
+        console.log(this);
+      };
+      funcB();
+
+      const tempInterval = setInterval(() => {
+        console.log("1초 지났어");
+      }, 1000);
+      for (let i = 0; i < 200000; i++) {
+        console.log(i);
+      }
+      //   clearInterval(tempInterval);
+
+      //   fetch("http://127.0.0.1:5500/0.Question/index.html").then((data) => {
+      //     console.log(data);
+      //   });
     </script>
   </body>
 </html>
