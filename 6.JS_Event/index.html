@@ -86,17 +86,60 @@
       };
       funcB();
 
-      const tempInterval = setInterval(() => {
-        console.log("1초 지났어");
-      }, 1000);
-      for (let i = 0; i < 200000; i++) {
-        console.log(i);
-      }
+      // const tempInterval = setInterval(() => {
+      //   console.log("1초 지났어");
+      // }, 1000);
+      // for (let i = 0; i < 200000; i++) {
+      //   console.log(i);
+      // }
       //   clearInterval(tempInterval);
 
       //   fetch("http://127.0.0.1:5500/0.Question/index.html").then((data) => {
       //     console.log(data);
       //   });
+      // class TempTest {
+      //   #count;
+      // }
+      const setCount = () => {
+        let count = 11;
+        // const getCount = () => aaa;
+        const getCount = () => {
+          return count;
+        };
+        const increase = () => {
+          count++;
+        };
+        const decrease = () => {
+          count--;
+        };
+        return { getCount, increase, decrease };
+        // 클로져, Closure
+      };
+      const count = setCount();
+      console.log(count.getCount());
+      let tempCount = count.getCount();
+      tempCount = 1;
+      console.log(count.increase());
+      console.log(count.getCount());
+
+      // fetch("http://127.0.0.1:5500/1.HTML/index.html")
+      //   .then((data) => {
+      //     return data.text();
+      //   })
+      //   .then((str) => {
+      //     console.log(str);
+      //   });
+
+      const getHTML = async () => {
+        try {
+          const data = await fetch("http://127.0.0.1:5500/1.HTML/index.html");
+          const str = await data.text();
+          console.log(str);
+        } catch (err) {
+          console.error(err);
+        }
+      };
+      getHTML();
     </script>
   </body>
 </html>
