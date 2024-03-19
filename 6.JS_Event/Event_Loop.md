@@ -2,6 +2,10 @@
 
 - JS 어떻게 작동하는가?
 
+# Javascript Runtime
+
+- Runtime : 환경, 코드를 실행시키기 위한 환경
+
 ## Web APIs
 
 - 브라우저가 내부적으로 실행하고 있는 스레드

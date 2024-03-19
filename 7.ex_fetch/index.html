@@ -1,0 +1,39 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const getOl = async () => {
+        try {
+          const data = await fetch("./list.html");
+          const olHTML = await data.text();
+          document.getElementById("root").innerHTML = olHTML;
+          document.getElementById("plz-set-id").id = "text-list";
+        } catch (err) {
+          console.error(err);
+        }
+      };
+      getOl();
+
+      const setItemsInArr = async (arr, parentId) => {
+        try {
+          const liHTML = await (await fetch("./item.html")).text();
+          const tempArr = arr.map((item) => {
+            const temp = liHTML.replace("plz-set-text", item);
+            console.log(temp);
+            return temp;
+          });
+          console.log(tempArr);
+          document.getElementById(parentId).innerHTML = tempArr.join("");
+        } catch (err) {
+          console.error(err);
+        }
+      };
+      setItemsInArr([1, 2, 3], "text-list");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        padding: 32px;
+      }
+      #div1 {
+        background-color: red;
+      }
+      #div2 {
+        background-color: blue;
+      }
+      #div3 {
+        background-color: green;
+      }
+      #div4 {
+        background-color: gold;
+      }
+      #div5 {
+        background-color: crimson;
+      }
+      #div6 {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2">
+        <div id="div3">
+          <div id="div4">
+            <div id="div5"></div>
+            <div id="div6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.body.onclick = () => {
+        console.log("click body");
+      };
+      document.getElementById("div1").onclick = (e) => {
+        console.log(e.target);
+        console.log("click div1");
+      };
+      document.getElementById("div2").onclick = (e) => {
+        console.log(e.target);
+        console.log("click div2");
+      };
+      document.getElementById("div3").onclick = (e) => {
+        e.stopPropagation();
+        console.log(e.target);
+        console.log("click div3");
+      };
+      document.getElementById("div4").onclick = (e) => {
+        console.log(e.target);
+        console.log("click div4");
+      };
+      document.getElementById("div5").onclick = (e) => {
+        console.log(e.target);
+        console.log("click div5");
+      };
+      document.getElementById("div6").onclick = (e) => {
+        console.log(e.target);
+        console.log("click div6");
+      };
+
+      // 여까지 버블링
+
+      //   document.body.addEventListener(
+      //     "click",
+      //     (e) => {
+      //       console.log(e.target);
+      //       console.log("capture body");
+      //     },
+      //     { capture: true }
+      //   );
+      //   const tempFunc = (e) => {
+      //     console.log(e.target);
+      //     console.log("capture div1");
+      //   };
+      //   document
+      //     .getElementById("div1")
+      //     .addEventListener("click", tempFunc, { capture: true });
+      //   //   document.getElementById("div1").removeEventListener("click", tempFunc);
+      //   document.getElementById("div2").addEventListener(
+      //     "click",
+      //     (e) => {
+      //       console.log(e.target);
+      //       console.log("capture div2");
+      //     },
+      //     { capture: true }
+      //   );
+      //   document.getElementById("div3").addEventListener(
+      //     "click",
+      //     (e) => {
+      //       console.log(e.target);
+      //       console.log("capture div3");
+      //     },
+      //     { capture: true }
+      //   );
+      //   document.getElementById("div4").addEventListener(
+      //     "click",
+      //     (e) => {
+      //       console.log(e.target);
+      //       console.log("capture div4");
+      //     },
+      //     { capture: true }
+      //   );
+      //   document.getElementById("div5").addEventListener(
+      //     "click",
+      //     (e) => {
+      //       console.log(e.target);
+      //       console.log("capture div5");
+      //     },
+      //     { capture: true }
+      //   );
+      //   document.getElementById("div6").addEventListener(
+      //     "click",
+      //     (e) => {
+      //       console.log(e.target);
+      //       console.log("capture div6");
+      //     },
+      //     { capture: true }
+      //   );
+      // 여까지 캡쳐링
+    </script>
+  </body>
+</html>
