@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>간단한 슬라이드</title>
+    <style>
+      .slideshow {
+        max-width: 600px;
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+        border: 1px solid #ccc;
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        min-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slideshow">
+      <div class="slides">
+        <div class="slide">
+          <img
+            src="https://via.placeholder.com/600x300?text=Slide+1"
+            alt="Slide 1"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://via.placeholder.com/600x300?text=Slide+2"
+            alt="Slide 2"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://via.placeholder.com/600x300?text=Slide+3"
+            alt="Slide 3"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let slides = document.querySelectorAll(".slide");
+        if (slideIndex >= slides.length) {
+          slideIndex = 0;
+        }
+        slides.forEach((slide) => {
+          slide.style.display = "none";
+        });
+        slides[slideIndex].style.display = "block";
+        slideIndex++;
+        setTimeout(showSlides, 2000); // 2초마다 슬라이드 전환
+      }
+    </script>
+  </body>
+</html>
