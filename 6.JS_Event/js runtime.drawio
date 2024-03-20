@@ -1,0 +1,243 @@
+<mxfile host="app.diagrams.net" modified="2024-03-20T00:58:23.736Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="Vo-DiBG2DW7z4Lcg2DBF" version="24.0.7" type="device">
+  <diagram name="페이지-1" id="zqPWFbdZQOUQoietvD4P">
+    <mxGraphModel dx="819" dy="446" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-1" value="Javascript Runtime(Browser)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="700" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-2" value="Javascript Engine" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-1">
+          <mxGeometry x="20" y="40" width="440" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-3" value="CallStack" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-2">
+          <mxGeometry x="20" y="40" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-69" value="실행 컨텍스트" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-3">
+          <mxGeometry x="10" y="130" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-70" value="Record" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-69">
+          <mxGeometry x="10" y="30" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-71" value="Outer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-69">
+          <mxGeometry x="110" y="30" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-72" value="실행 컨텍스트" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-3">
+          <mxGeometry x="10" y="70" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-73" value="Record" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-72">
+          <mxGeometry x="10" y="30" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-74" value="Outer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-72">
+          <mxGeometry x="110" y="30" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="3Y0hawDN6cxX8ptMpRJB-3" source="3Y0hawDN6cxX8ptMpRJB-74" target="3Y0hawDN6cxX8ptMpRJB-69">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="110" />
+              <mxPoint x="210" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-4" value="MemoryHeap" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-2">
+          <mxGeometry x="220" y="40" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-5" value="Web API" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-1">
+          <mxGeometry x="480" y="40" width="200" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-54" value="setTimeout" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-5">
+          <mxGeometry x="10" y="30" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-55" value="setInterval" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-5">
+          <mxGeometry x="10" y="70" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-65" value="Ajax" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-5">
+          <mxGeometry x="10" y="110" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-66" value="window" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-5">
+          <mxGeometry x="10" y="150" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-67" value="Promise" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-5">
+          <mxGeometry x="10" y="190" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-7" value="Callback Queue" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-1">
+          <mxGeometry x="200" y="320" width="480" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-9" value="EventLoop" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-1">
+          <mxGeometry x="20" y="320" width="122.5" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-11" value="HTML을 브라우저에서 어떻게 읽어낼까?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-12" target="3Y0hawDN6cxX8ptMpRJB-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-12" value="HTML 파일(문서)를 받아온다." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-13" target="3Y0hawDN6cxX8ptMpRJB-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-13" value="DOM 객체 만든다.(document)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-15" target="3Y0hawDN6cxX8ptMpRJB-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-15" value="window 객체를 만든다." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-17" target="3Y0hawDN6cxX8ptMpRJB-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-17" value="DOM에 HTML 파일의 내용을 하나하나 적용한다." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-20" target="3Y0hawDN6cxX8ptMpRJB-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-23" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3Y0hawDN6cxX8ptMpRJB-22">
+          <mxGeometry x="-0.0609" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-20" target="3Y0hawDN6cxX8ptMpRJB-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-26" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3Y0hawDN6cxX8ptMpRJB-25">
+          <mxGeometry x="-0.26" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-20" value="script 엘리먼트 인가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="630" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-24" target="3Y0hawDN6cxX8ptMpRJB-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-24" value="Javascript Runtime의 EventLoop에게 코드를 전달" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-27" target="3Y0hawDN6cxX8ptMpRJB-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-30" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3Y0hawDN6cxX8ptMpRJB-29">
+          <mxGeometry x="-0.169" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-27" target="3Y0hawDN6cxX8ptMpRJB-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-35" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3Y0hawDN6cxX8ptMpRJB-34">
+          <mxGeometry x="0.1155" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-27" value="style 엘리먼트 인가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="740" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-28" target="3Y0hawDN6cxX8ptMpRJB-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="890" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-39" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3Y0hawDN6cxX8ptMpRJB-36">
+          <mxGeometry x="0.056" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-28" target="3Y0hawDN6cxX8ptMpRJB-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-47" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3Y0hawDN6cxX8ptMpRJB-45">
+          <mxGeometry x="-0.5286" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-28" value="link 엘리먼트 인가?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="860" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-33" value="CSS 스타일을 DOM에 적용한다." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-37" target="3Y0hawDN6cxX8ptMpRJB-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-37" value="CSS 파일을 가져온다." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-41" value="JS 코드가 EventLoop에서 실행된다.&lt;div&gt;(feat. Javascript Runtime)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-44" target="3Y0hawDN6cxX8ptMpRJB-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-48" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3Y0hawDN6cxX8ptMpRJB-46">
+          <mxGeometry x="-0.7381" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-44" target="3Y0hawDN6cxX8ptMpRJB-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-51" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="3Y0hawDN6cxX8ptMpRJB-50">
+          <mxGeometry x="0.0393" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-44" value="HTML 파일을&lt;div&gt;모두 읽었는가?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="980" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3Y0hawDN6cxX8ptMpRJB-49" target="3Y0hawDN6cxX8ptMpRJB-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-49" value="정리된 DOM 객체를 가지고 브라우저 화면에 출력을 위해 계산한다." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-52" value="출력한다." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-79" value="Javascript Runtime(Node.js)" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="40" width="700" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-80" value="Javascript Engine" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-79">
+          <mxGeometry x="20" y="40" width="440" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-81" value="CallStack" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-80">
+          <mxGeometry x="20" y="40" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-82" value="실행 컨텍스트" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-81">
+          <mxGeometry x="10" y="130" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-83" value="Record" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-82">
+          <mxGeometry x="10" y="30" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-84" value="Outer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-82">
+          <mxGeometry x="110" y="30" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-89" value="MemoryHeap" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-80">
+          <mxGeometry x="220" y="40" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-96" value="Callback Queue" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-79">
+          <mxGeometry x="200" y="320" width="480" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-97" value="EventLoop" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-79">
+          <mxGeometry x="20" y="320" width="122.5" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-98" value="setTimeout" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-79">
+          <mxGeometry x="500" y="40" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-99" value="setInterval" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-79">
+          <mxGeometry x="500" y="80" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-100" value="Promise" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-79">
+          <mxGeometry x="500" y="120" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3Y0hawDN6cxX8ptMpRJB-101" value="global" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="3Y0hawDN6cxX8ptMpRJB-79">
+          <mxGeometry x="500" y="160" width="180" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
