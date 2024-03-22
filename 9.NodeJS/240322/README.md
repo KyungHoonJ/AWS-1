@@ -11,3 +11,22 @@
 - Buffer로 데이터를 받지 않고 String으로 처리했을 때 길이가 맞지 않아서 오류가 발생했었다.
 - UTF-8은 1~4 byte, 4 byte UTF-16
 - a~z, A~Z << 1 byte << 이것만 따로 모아둔, ff, 1 byte만을 가질 수 있는 언어포멧? => ASCII(아스키)
+
+# JSON
+
+- 문자열이다.
+- Javascript Object Notation
+
+```json
+{
+  "a": 1,
+  "b": "b"
+}
+```
+
+```javascript
+{
+  a: 1,
+  b: "b"
+}
+```
