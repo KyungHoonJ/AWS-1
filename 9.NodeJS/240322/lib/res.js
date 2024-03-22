@@ -9,4 +9,14 @@ const makeResponse = (type, body) => {
 ${body.toString()}`;
 };
 
-module.exports = { makeResponse };
+const redirect = () => {
+  return `HTTP/1.1 301 Moved Permenently
+Content-Type: text/html
+Content-Length: 0
+Connection: Close
+Location: /
+
+`;
+};
+
+module.exports = { makeResponse, redirect };
