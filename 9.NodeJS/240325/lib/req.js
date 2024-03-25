@@ -1,7 +1,10 @@
 const parseHeader = (str) => {
   const arr = str.split("\r\n");
   const [method, path, protocol] = arr[0].split(" ");
-  const temp = { method, path, protocol };
+  let tempIdx = path.indexOf("?");
+  if (tempIdx == -1) tempIdx = path.length;
+  const temp = { method, path: path.slice(0, tempIdx), protocol };
+  // console.log(temp.path);
 
   if (path.indexOf(".jpg") > -1) {
     temp.ext = "jpg";
@@ -35,6 +38,7 @@ const parseBody = (str) => {
 
 const makeReq = (data) => {
   const tempStr = data.toString();
+  console.log(tempStr);
   const [headerStr, bodyStr] = tempStr.split("\r\n\r\n");
 
   return { header: parseHeader(headerStr), body: parseBody(bodyStr) };
