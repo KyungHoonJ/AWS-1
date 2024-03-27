@@ -1,5 +1,12 @@
+console.log(
+  "2. require() 함수를 사용해서 lib 폴더의 express.js를 실행하고 결과를 가져가기"
+);
 const net = require("net");
+console.log("3. net 모듈 가져오기");
 
+console.log(
+  "4. require 함수로 같은 lib 폴더의 req.js 파일의 makeReq 메서드를 가져오기"
+);
 const { makeReq } = require("./req");
 const { makeResponse } = require("./res");
 
@@ -32,7 +39,9 @@ const app = {
 };
 
 const server = net.createServer((client) => {
+  console.log("100. data 이벤트 발생 시 처리하는 코드를 추가");
   client.on("data", (data) => {
+    console.log("101. 11111");
     const req = makeReq(data);
     const res = createRes(client);
 
