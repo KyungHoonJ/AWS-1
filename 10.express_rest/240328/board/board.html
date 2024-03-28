@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판</title>
+    <link rel="stylesheet" href="board.css" />
+  </head>
+  <body>
+    <div id="root">
+      <h1 class="box-center">게시판</h1>
+      <ul id="list">
+        <li class="header">
+          <ul class="row">
+            <li class="num box-center">번호</li>
+            <li class="title box-center">제목</li>
+            <li class="writer box-center">글쓴이</li>
+            <li class="createdAt box-center">등록일</li>
+          </ul>
+          <!-- 내용 -->
+          <!-- 조회수 -->
+          <!-- 추천수 -->
+          <!-- 댓글수 -->
+        </li>
+        <li class="item notice">
+          <ul class="row">
+            <li class="num box-center">1</li>
+            <li class="title">오늘의 점심은?</li>
+            <li class="writer box-center">이정배</li>
+            <li class="createdAt box-center">24-03-28</li>
+          </ul>
+        </li>
+        <li class="item">
+          <ul class="row">
+            <li class="num">2</li>
+            <li class="title">오늘의 점심은?</li>
+            <li class="writer">이정배</li>
+            <li class="createdAt">24-03-28</li>
+          </ul>
+        </li>
+      </ul>
+      <form action="" id="write">
+        <fieldset>
+          <legend>게시글 등록</legend>
+          <div class="input-box">
+            <label for="title">제목 : </label>
+            <input type="text" id="title" />
+          </div>
+          <div class="input-box">
+            <label for="writer">글쓴이 : </label>
+            <input type="text" id="writer" />
+          </div>
+          <div>
+            <button id="add-btn">등록</button>
+            <button type="reset" id="cancel-btn">취소</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="board.js"></script>
+  </body>
+</html>
