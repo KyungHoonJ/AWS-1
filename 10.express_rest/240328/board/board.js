@@ -1,10 +1,4 @@
-const listElem = document.getElementById("list");
-
-const titleElem = document.getElementById("view-title");
-const writerElem = document.getElementById("view-writer");
-const createdAtElem = document.getElementById("view-created_at");
-const contentElem = document.getElementById("view-content");
-
+// 게시글 클래스
 class Board {
   static #count = 1;
   #id;
@@ -35,12 +29,21 @@ class Board {
   getIsNotice = () => this.#isNotice;
 }
 
+// 게시판 목록
+const listElem = document.getElementById("list");
+
 const list = [
   new Board("오늘의 점심은?", "이정배", "도시락"),
   new Board("오늘의 저녁은?", "이승배", "뭐먹지?"),
   new Board("오늘의 과제는?", "방지완", "지워주세요."),
 ];
 console.log(list);
+
+// 게시판 목록 랜더링
+const titleElem = document.getElementById("view-title");
+const writerElem = document.getElementById("view-writer");
+const createdAtElem = document.getElementById("view-created_at");
+const contentElem = document.getElementById("view-content");
 
 const setView = (idx) => {
   titleElem.innerText = list[idx].getTitle();
@@ -82,6 +85,7 @@ const reRender = () => {
 
 reRender();
 
+// 게시글 작성
 document.getElementById("add-btn").onclick = (e) => {
   e.preventDefault();
   list.push(
