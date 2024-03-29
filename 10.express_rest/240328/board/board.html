@@ -49,12 +49,23 @@
             <label for="writer">글쓴이 : </label>
             <input type="text" id="writer" />
           </div>
+          <div class="input-box">
+            <textarea type="text" id="content"></textarea>
+          </div>
           <div>
             <button id="add-btn">등록</button>
             <button type="reset" id="cancel-btn">취소</button>
           </div>
         </fieldset>
       </form>
+      <div>
+        <h1 id="view-title"></h1>
+        <div>
+          <span id="view-writer"></span>
+          <span id="view-created_at"></span>
+        </div>
+        <p id="view-content"></p>
+      </div>
     </div>
     <script src="board.js"></script>
   </body>

@@ -27,10 +27,15 @@ const app = {
   execList: (req, res) => {
     const { method, path } = req.header;
     let isRun = false;
+    let isNext = false;
     app.funcList.forEach((item) => {
       if (method != item.method) return;
       if (path != item.path) return;
-      item.func(req, res);
+      if (isRun && !isNext) return;
+      isNext = false;
+      item.func(req, res, () => {
+        isNext = true;
+      });
       isRun = true;
     });
     return isRun;
