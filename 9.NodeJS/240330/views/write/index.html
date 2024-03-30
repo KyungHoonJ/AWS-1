@@ -1,0 +1,787 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>write</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <form action="http://localhost:3000/write" method="post">
+      <div id="back-wrap">
+        <div id="wrap">
+          <div id="board">
+            <div id="header">
+              <div class="title-img">
+                <img src="../imgs/header.png" alt="헤더" />
+              </div>
+              <div class="ad-img">광고</div>
+            </div>
+            <div id="menu">
+              <div>홈</div>
+              <div>기록실</div>
+              <div>스킨갤러리</div>
+              <div>챔피언</div>
+              <div>공략</div>
+              <div>LOLDB</div>
+            </div>
+            <div id="content-wrap">
+              <div id="left-bar">
+                <div class="left-info">
+                  <div class="left-header">리그오브레전드 인벤</div>
+                  <div class="log-in">
+                    <div>로그인하고</div>
+                    <div>출석보상 받으세요!</div>
+                  </div>
+                  <div class="login-btn">INVEN 로그인</div>
+                  <div class="left-membership">
+                    <div>회원가입</div>
+                    <div>ID/PW찾기</div>
+                  </div>
+                </div>
+
+                <div class="left-search">
+                  <input type="search-box" />
+                  <div class="search-btn">🔍</div>
+                </div>
+                <div class="left-menu">
+                  <div class="news-menu">
+                    <header>LoL 뉴스/정보</header>
+                    <div style="color: cornflowerblue">리포터뉴스</div>
+                    <div>챔피언 공략 게시판</div>
+                    <div>유저 정보/뉴스</div>
+                    <div>팁과 노하우</div>
+                    <div>패치 노트</div>
+                    <div>버그/오류 제보 게시판</div>
+                  </div>
+                  <div class="position">
+                    <header>포지션 게시판</header>
+                    <div class="po1">
+                      <div>Top</div>
+                      <div>Jungle</div>
+                    </div>
+                    <div class="po1">
+                      <div>Mid</div>
+                      <div>bot</div>
+                    </div>
+                    <div class="po1">
+                      <div>support</div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="ca-menu">
+                    <header>커뮤니티 게시판</header>
+                    <div>소환사 광장</div>
+                    <div style="font-weight: 800">- LoL/e스포츠 이야기</div>
+                    <div style="font-weight: 800">- 자유 주제</div>
+                    <div style="font-weight: 800">- 서브 컬쳐</div>
+                    <div style="color: dodgerblue">LoL 티어랭킹</div>
+                    <div>이슈/토론 게시판</div>
+                    <div>사건 사고 게시판</div>
+                    <div>이미지 링크 게시판</div>
+                    <div>사이트 건의/제보</div>
+                    <div style="color: blue">와일드 리프트 게시판</div>
+                    <div style="color: blue">TFT 모드 게시판</div>
+                    <div style="color: blue">칼바람 나락 게시판</div>
+                    <div>LCK 응원 게시판</div>
+                  </div>
+                  <div class="ca-menu">
+                    <header>LoL UCC</header>
+                    <div style="color: darkmagenta">LoL 유튜브 모아보기</div>
+                    <div>팬아트/카툰 게시판</div>
+                    <div>동영상 게시판</div>
+                  </div>
+                  <div class="ca-menu">
+                    <header>LoL 파티매칭</header>
+                    <div>파티 매칭/팀원 모집</div>
+                    <div>-랭크 팀원 모집</div>
+                    <div>-칼바람 팀원 모집</div>
+                    <div>[격전] 팀원 모집</div>
+                  </div>
+                  <div class="left-ad">광고</div>
+                  <div class="ca-menu">
+                    <header>공통 커뮤니티</header>
+                    <div>오픈 이슈 갤러리</div>
+                    <div>오늘의 핫벤</div>
+                    <div>오늘의 핏벤</div>
+                    <div style="font-weight: 700">Ai 그림 그리기</div>
+                    <div>PC 견적 게시판</div>
+                    <div>더보기</div>
+                  </div>
+                  <div class="ca-menu">
+                    <header>인기 팟벤</header>
+                    <div>팟벤 바로가기</div>
+                    <div>AI그림</div>
+                    <div>--AI그림그리기(부에르)</div>
+                    <div>애니메이션</div>
+                    <div>걸그룹</div>
+                    <div>보드게임</div>
+                    <div>테일즈위버</div>
+                    <div>천애명월도M</div>
+                    <div>소울워커</div>
+                    <div>운동</div>
+                    <div>주식</div>
+                    <div>이니빵</div>
+                    <div>D2R명품관</div>
+                    <div>카스글옵</div>
+                  </div>
+                </div>
+              </div>
+              <div id="middle-box">
+                <div class="board-head">
+                  <div class="tip-title">LoL 실시간 유저정보</div>
+                  <div class="user-box">
+                    <div class="tip">
+                      <header>- 팁과 노하우</header>
+                      <div class="tip-list">
+                        <div>
+                          <header>가이드</header>
+                          <div>14시즌 탑라이즈</div>
+                        </div>
+                        <div>
+                          <header>일반</header>
+                          <div>롤와드표시신호어딧음?</div>
+                        </div>
+                        <div>
+                          <header>가이드</header>
+                          <div>[잭스]피오라상대법+우디르 상대하는 개념</div>
+                        </div>
+                        <div>
+                          <header>일반</header>
+                          <div>
+                            플레이어 정보를 불러오지 못했습니다 오류원인
+                          </div>
+                        </div>
+                        <div>
+                          <header>일반</header>
+                          <div>고사양 롤 렉</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tft">
+                      <header>- TFT 모드 게시판 인기글</header>
+                      <div class="tft-list">
+                        <div>
+                          <header>패치</header>
+                          <div>TFT 정식패치 14.3#1</div>
+                        </div>
+                        <div>
+                          <header>패치</header>
+                          <div>TFT 정식 패치 13.24#1</div>
+                        </div>
+                        <div>
+                          <header>잡담</header>
+                          <div>가장 쉬운 시즌 25판 플레 찍고 즐겜시작</div>
+                        </div>
+                        <div>
+                          <header>잡담</header>
+                          <div>시즌6이후로 오랜만에 아이언에서 실버승급</div>
+                        </div>
+                        <div>
+                          <header>잡담</header>
+                          <div>개사기쳣는데 개사기꾼 만나서 졋음</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="patch"></div>
+                  <div class="skin"></div>
+                </div>
+
+                <div class="new-board">
+                  <div class="toolbar">
+                    <div class="toolbar-title">
+                      <div>제목:</div>
+                      <input type="text" name="title" placeholder="title" />
+                    </div>
+                    <div class="toolbar-tip">
+                      <div>작성자</div>
+                    </div>
+                    <div class="toolbar-save">
+                      <div>임시저장</div>
+                      <div>불러오기</div>
+                    </div>
+                  </div>
+                  <div class="write-content">
+                    <div class="write-edit"></div>
+                    <textarea
+                      class="write-box"
+                      type="text"
+                      name="content"
+                    ></textarea>
+                  </div>
+                  <div class="write-btns">
+                    <div class="l-btns">
+                      <div>이미지 첨부</div>
+                      <div>파일첨부</div>
+                      <div>내짤</div>
+                      <div style="background-color: skyblue; color: white">
+                        투표
+                      </div>
+                    </div>
+                    <div class="r-btns">
+                      <div>LOL 아이콘</div>
+                    </div>
+                  </div>
+
+                  <div class="write-save">
+                    <div class="img-uplode">
+                      <div class="uplode-text">
+                        <div class="uplode-tip">
+                          * 이미지를 업로드 하신 후 클릭을 하셔야 본문에
+                          첨부됩니다
+                        </div>
+                        <div>* 이미지 업로드는 최대 15MB까지 가능합니다.</div>
+                        <div>* 총 5개까지 업로드 가능합니다.</div>
+                        <div>
+                          * 통신환경에따라 고용량 이미지의 업로드가 실패할 수
+                          있습니다
+                        </div>
+                        <p></p>
+                        <div>
+                          * 정보통신망에서 불법촬영물등을 유포할
+                          경우[전기통신사업법]제22조의 5 제 1항에따른
+                          삭제.접속차단등 유통방지에 필요한 조치가
+                          취해지며[성폭력처벌법] 제 14조 [청소년성보호법]제
+                          11조에 따라 형사처벌을 받을수 있습니다.
+                        </div>
+                      </div>
+                      <div class="uplode-btn">업로드</div>
+                    </div>
+                    <div class="end-write">
+                      <div class="clip">
+                        <button>클립보드 복사후 작성완료</button>
+                      </div>
+                      <div class="en">
+                        <button>작성완료</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="right-bar">
+            <div id="top-ad">광고</div>
+            <div id="hot-list">
+              <div class="ca1">
+                <div class="link-tab">
+                  <div class="ben on">🔥오늘의 핫벤</div>
+                  <div class="ben">📌오늘의 팟벤</div>
+                </div>
+                <div class="po-box">
+                  <div class="po-list on">
+                    <div>
+                      <div class="num">1</div>
+                      <div class="tag">리니지M</div>
+                      <div class="text">인사이드 진짜 대단하다</div>
+                    </div>
+                    <div>
+                      <div class="num">2</div>
+                      <div class="tag">리니지M</div>
+                      <div class="text">리니지엠 결국 터질게 터졋네..</div>
+                    </div>
+                    <div>
+                      <div class="num">3</div>
+                      <div class="tag">로아</div>
+                      <div class="text">지인건슬 이클 구조대중인데 운다..</div>
+                    </div>
+                    <div>
+                      <div class="num">4</div>
+                      <div class="tag">로아</div>
+                      <div class="text">[펌]요즘 더퍼판 요약.jpg</div>
+                    </div>
+                    <div>
+                      <div class="num">5</div>
+                      <div class="tag">메이플</div>
+                      <div class="text">초장문) 길드 및 노블은 개선이 ...</div>
+                    </div>
+                    <div>
+                      <div class="num">6</div>
+                      <div class="tag">로아</div>
+                      <div class="text">템포좌 근황</div>
+                    </div>
+                    <div>
+                      <div class="num">7</div>
+                      <div class="tag">리니지M</div>
+                      <div class="text">와 이런건 또 처음이네;;</div>
+                    </div>
+                    <div>
+                      <div class="num">8</div>
+                      <div class="tag">로아</div>
+                      <div class="text">우리 부길마 어쩌면 좋냐</div>
+                    </div>
+                    <div>
+                      <div class="num">9</div>
+                      <div class="tag">와우</div>
+                      <div class="text">확실해졋다</div>
+                    </div>
+                    <div>
+                      <div class="num">10</div>
+                      <div class="tag">로아</div>
+                      <div class="text">볼다이크에서 수입하고 쿠르잔에..</div>
+                    </div>
+                  </div>
+                  <div class="po-list">
+                    <div>
+                      <div class="num">1</div>
+                      <div class="tag">걸그룹</div>
+                      <div class="text">ITZY 예지</div>
+                    </div>
+                    <div>
+                      <div class="num">2</div>
+                      <div class="tag">걸그룹</div>
+                      <div class="text">예리 생파</div>
+                    </div>
+                    <div>
+                      <div class="num">3</div>
+                      <div class="tag">드래곤즈</div>
+                      <div class="text">나만의 캐릭터를 꾸미자! 드래..</div>
+                    </div>
+                    <div>
+                      <div class="num">4</div>
+                      <div class="tag">빈딕투스</div>
+                      <div class="text">마영전 피오나 유저 피오나 후기</div>
+                    </div>
+                    <div>
+                      <div class="num">5</div>
+                      <div class="tag">걸그룹</div>
+                      <div class="text">르세라핌</div>
+                    </div>
+                    <div>
+                      <div class="num">6</div>
+                      <div class="tag">라폭</div>
+                      <div class="text">디아4에 절여진후 입문해보려는데요</div>
+                    </div>
+                    <div>
+                      <div class="num">7</div>
+                      <div class="tag">라폭</div>
+                      <div class="text">앙 빈혈 3잠재 먹었당~</div>
+                    </div>
+                    <div>
+                      <div class="num">8</div>
+                      <div class="tag">라폭</div>
+                      <div class="text">잠재가 낮아도 가치있는 아이템 모음</div>
+                    </div>
+                    <div>
+                      <div class="num">9</div>
+                      <div class="tag">차벤</div>
+                      <div class="text">화제의 벤츠 주차실력 일단 저는...</div>
+                    </div>
+                    <div>
+                      <div class="num">10</div>
+                      <div class="tag">반딕투스</div>
+                      <div class="text">놀태식이 돌아왔구나!</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ca2">
+                <header>인벤 투표</header>
+                <div>
+                  <div class="topic">하객룩</div>
+                  <div class="source">웹진 인벤</div>
+                  <div class="vote">
+                    <div>투표하기</div>
+                  </div>
+                </div>
+              </div>
+              <div class="ca3">
+                <header>최근 HOT한 콘텐츠</header>
+                <div class="hot-tag">
+                  <div class="h-tag on">LoL</div>
+                  <div class="h-tag">게임</div>
+                  <div class="h-tag">IT</div>
+                  <div class="h-tag">유머</div>
+                  <div class="h-tag">클래스</div>
+                </div>
+                <div class="hot-content">
+                  <div class="h-content on">
+                    <div>
+                      <div class="num">1</div>
+                      <div class="text">젠지, T1과 1위 결정전 2:0으로 완승</div>
+                    </div>
+                    <div>
+                      <div class="num">2</div>
+                      <div class="text">
+                        케리아', "바뀐 티어 정리 힘들었다...지금도
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">3</div>
+                      <div class="text">
+                        '숙원' 이룬 한화생명e스포츠, 대어 T1 잡..
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">4</div>
+                      <div class="text">
+                        짜릿한 역전승...T1, 디플러스 기아 잡고
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">5</div>
+                      <div class="text">
+                        '쵸비' 정지훈, 젠지글로벌아카데미에 6천..
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">6</div>
+                      <div class="text">
+                        광동 김대호 감독 "처참한 미래는 인내할 수..
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">7</div>
+                      <div class="text">LCK, 임대 선수 제도 도입</div>
+                    </div>
+                    <div>
+                      <div class="num">8</div>
+                      <div class="text">
+                        LCK, 3월 20일부터 '유관중' 생중계 재개
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">9</div>
+                      <div class="text">
+                        젠지 e스포츠, 날선 디플러스 기아에 '패승...
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">10</div>
+                      <div class="text">
+                        2024 LCK 스프링 '디펜딩 챔피언' 젠지,..
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-content">
+                    <div>
+                      <div class="num">1</div>
+                      <div class="text">
+                        다시 만나는 '젠레스 존 제로', 17일 테스터 모
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">2</div>
+                      <div class="text">
+                        LCK, 3월 20일부터 '유관중' 생중계 재개
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">3</div>
+                      <div class="text">'프라시아 전기'는 결국 전쟁이다</div>
+                    </div>
+                    <div>
+                      <div class="num">4</div>
+                      <div class="text">
+                        게임&e스포츠 총선공약 내건 국민의힘,
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">5</div>
+                      <div class="text">
+                        '빈딕투스, 다음 캐릭터는 '카록&델리아.
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">6</div>
+                      <div class="text">
+                        LoL, 이제 궁극기로 3명 꿰뚫는 New 스
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">7</div>
+                      <div class="text">
+                        신규 전직의 힘! '던전앤파이터' TOP10 홀
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">8</div>
+                      <div class="text">리얼 발컨! '만능발'을 만나다</div>
+                    </div>
+                    <div>
+                      <div class="num">9</div>
+                      <div class="text">
+                        스팀 퇴출 '다크 앤 다커', 에픽 스토어 입점...
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">10</div>
+                      <div class="text">
+                        "페르소나3 리로드에 여주인공 추가 계..
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-content">
+                    <div>
+                      <div class="num">1</div>
+                      <div class="text">
+                        UMPC로 지하철에서 일일숙제, 가능할까
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">2</div>
+                      <div class="text">
+                        한국레노버, ‘리전탭 Y700 2세대’ 국내 공
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">3</div>
+                      <div class="text">서울시립대학에서 만난 MSI 40 SUPER</div>
+                    </div>
+                    <div>
+                      <div class="num">4</div>
+                      <div class="text">
+                        화려한 RGB 속 깔끔한 게이밍 룸을 위해, 시크릿랩 매그너스
+                        데스크
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">5</div>
+                      <div class="text">
+                        MSI, 21:9 울트라 와이드 180Hz 고주사율
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">6</div>
+                      <div class="text">
+                        MSI, AI 워크스테이션 노트북 '크리에이터
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">7</div>
+                      <div class="text">
+                        게이밍과 AI의 축제, AMD X ASRock Me
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">8</div>
+                      <div class="text">
+                        인텔, 가장 빠른 프로세서 '14세대 인텔 코
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">9</div>
+                      <div class="text">
+                        명품 의자에 스킨을 입히다? '시크릿랩 스킨
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">10</div>
+                      <div class="text">
+                        로지텍, 플래그십 무선 게이밍 헤드셋 ‘A..
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-content">
+                    <div>
+                      <div class="num">1</div>
+                      <div class="text">
+                        안산님, 진짜 궁금해서 그러는데 대답좀
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">2</div>
+                      <div class="text">
+                        요즘 젊은것들은 단칸방에서 시작하려하지
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">3</div>
+                      <div class="text">
+                        한동훈, 이재명 '2찍 발언'에 "인종차별 준하
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">4</div>
+                      <div class="text">여대생 따먹은 경찰의 최후</div>
+                    </div>
+                    <div>
+                      <div class="num">5</div>
+                      <div class="text">남자 룸메 구한다는 여자</div>
+                    </div>
+                    <div>
+                      <div class="num">6</div>
+                      <div class="text">헬스장 착용금지 레깅스</div>
+                    </div>
+                    <div>
+                      <div class="num">7</div>
+                      <div class="text">요새 인기라는 인터넷 문화</div>
+                    </div>
+                    <div>
+                      <div class="num">8</div>
+                      <div class="text">금괴와 은괴로 가득찬 갑부의 금고</div>
+                    </div>
+                    <div>
+                      <div class="num">9</div>
+                      <div class="text">
+                        ㅇㅎ) 수상하게 프리미엄이 붙는 당근 매물
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">10</div>
+                      <div class="text">씨름선수의 코어힘</div>
+                    </div>
+                  </div>
+                  <div class="h-content">
+                    <div>
+                      <div class="num">1</div>
+                      <div class="text">
+                        박수홍·김다예, 결혼 3년 만 임신 “첫 시험
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">2</div>
+                      <div class="text">얼마 전 팬사인회 한 아이유</div>
+                    </div>
+                    <div>
+                      <div class="num">3</div>
+                      <div class="text">장원영 단발</div>
+                    </div>
+                    <div>
+                      <div class="num">4</div>
+                      <div class="text">
+                        [트와이스] 강아지 배 만지는 샤샤샤.gif...
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">5</div>
+                      <div class="text">트와이스 지효,쯔위 구찌 팝업스토어</div>
+                    </div>
+                    <div>
+                      <div class="num">6</div>
+                      <div class="text">엔믹스 설윤</div>
+                    </div>
+                    <div>
+                      <div class="num">7</div>
+                      <div class="text">카리나</div>
+                    </div>
+                    <div>
+                      <div class="num">8</div>
+                      <div class="text">엔믹스 오해원</div>
+                    </div>
+                    <div>
+                      <div class="num">9</div>
+                      <div class="text">하루 한번 강슬기씨</div>
+                    </div>
+                    <div>
+                      <div class="num">10</div>
+                      <div class="text">엔믹스 해원, 설윤</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ca4">
+                <img src="../imgs/inven1.png" alt="lol" />
+              </div>
+              <div class="ca5">
+                <img src="../imgs/inven2.png" alt="lol" />
+              </div>
+              <div class="ca6">
+                <header>LoL인벤 화제글</header>
+                <div class="inven-link">
+                  <div class="in-link on">e스포츠</div>
+                  <div class="in-link">정보&소식</div>
+                </div>
+                <div class="inven-hot">
+                  <div class="inven on">
+                    <div>
+                      <div class="num">1</div>
+                      <div class="text">약후방) 전설의 인증샷</div>
+                    </div>
+                    <div>
+                      <div class="num">2</div>
+                      <div class="text">
+                        싸우지말고 갓쵸비 장학금 찬양해.jpg
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">3</div>
+                      <div class="text">담원 타잔영입은 좀 뜬금없긴하네</div>
+                    </div>
+                    <div>
+                      <div class="num">4</div>
+                      <div class="text">쿠팡 회원들 희소식...</div>
+                    </div>
+                    <div>
+                      <div class="num">5</div>
+                      <div class="text">비디디피셜 본인 3악장</div>
+                    </div>
+                    <div>
+                      <div class="num">6</div>
+                      <div class="text">T2보니깐 와...</div>
+                    </div>
+                    <div>
+                      <div class="num">7</div>
+                      <div class="text">
+                        이 짤은 진짜 내가 젠지팬 아니라도 열받았
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">8</div>
+                      <div class="text">쇼메 타잔이라..</div>
+                    </div>
+                    <div>
+                      <div class="num">9</div>
+                      <div class="text">페쵸는 오히려 문제같기도 함</div>
+                    </div>
+                    <div>
+                      <div class="num">10</div>
+                      <div class="text">점심값 2만원 시대</div>
+                    </div>
+                  </div>
+                  <div class="inven">
+                    <div>
+                      <div class="num">1</div>
+                      <div class="text">1세일 24.03.19 ~ 24.03.25</div>
+                    </div>
+                    <div>
+                      <div class="num">2</div>
+                      <div class="text">
+                        리메이크 스카너 스킬, 신규 스플래시 아트
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">3</div>
+                      <div class="text">오른 신규스킨 유출</div>
+                    </div>
+                    <div>
+                      <div class="num">4</div>
+                      <div class="text">서버터짐</div>
+                    </div>
+                    <div>
+                      <div class="num">5</div>
+                      <div class="text">서버 또터짐?</div>
+                    </div>
+                    <div>
+                      <div class="num">6</div>
+                      <div class="text">지금 롤됨?</div>
+                    </div>
+                    <div>
+                      <div class="num">7</div>
+                      <div class="text">
+                        개발 인사이드] 14.6 패치에 새로운 봇 인
+                      </div>
+                    </div>
+                    <div>
+                      <div class="num">8</div>
+                      <div class="text">스카너 리메이크 티저</div>
+                    </div>
+                    <div>
+                      <div class="num">9</div>
+                      <div class="text">롤 다시 됩니다</div>
+                    </div>
+                    <div>
+                      <div class="num">10</div>
+                      <div class="text">롤 되시는분??</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="../board.js"></script>
+  </body>
+</html>
