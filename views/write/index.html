@@ -1,0 +1,34 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 작성</title>
+    <link rel="stylesheet" href="/static.css" />
+    <link rel="stylesheet" href="/write/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <form action="/write" id="write" method="post">
+        <fieldset>
+          <legend><h1>게시글 등록</h1></legend>
+          <div class="input-box">
+            <label for="title">제목 : </label>
+            <input type="text" id="title" name="title" />
+          </div>
+          <div class="input-box">
+            <label for="writer">글쓴이 : </label>
+            <input type="text" id="writer" name="writer" />
+          </div>
+          <div class="input-box">
+            <textarea type="text" id="text" name="text"></textarea>
+          </div>
+          <div>
+            <button id="add-btn">등록</button>
+            <button type="reset" id="cancel-btn">취소</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="/write/index.js"></script>
+  </body>
+</html>

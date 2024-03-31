@@ -1,0 +1,15 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.info #writer {
+  flex: 1;
+}
+
+#text {
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  padding: 2rem;
+}

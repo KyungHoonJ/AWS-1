@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+.box-center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  max-width: 1000px;
+  padding: 2rem;
+  margin: auto;
+}

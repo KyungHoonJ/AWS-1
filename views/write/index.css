@@ -1,0 +1,24 @@
+#write div {
+  padding: 0.5rem 1rem;
+}
+
+#write .input-box {
+  display: flex;
+  align-items: center;
+}
+
+#write .input-box label {
+  width: 4rem;
+  display: inline-block;
+}
+
+#write .input-box input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+#write .input-box textarea {
+  width: 100%;
+  height: 20rem;
+  resize: none;
+}

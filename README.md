@@ -1,1 +1,14 @@
-# 경일 게임 아카데미 AWS 클라우드 융합 웹 프레임워크 개발자 양성과정A
+# 인터페이스 구현 재평가
+
+- 일자 : 2024년 4월 1일
+
+## API
+
+| Path    | Method | Request         | Response                                |
+| ------- | ------ | --------------- | --------------------------------------- |
+| /       | GET    | Null            | 게시판 목록웹페이지                     |
+| /write/ | GET    | Null            | 게시판 글쓰기 웹페이지                  |
+| /board/ | GET    | Null            | 게시글 웹페이지                         |
+| /       | POST   | { page, count } | [ { id, title, writer, createdAt }, … ] |
+| /write/ | POST   | { title, text } | redirect /                              |
+| /board/ | POST   | { id }          | { id, title, text }                     |
