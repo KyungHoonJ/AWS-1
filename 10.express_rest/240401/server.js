@@ -47,7 +47,8 @@ app.get("/board", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
-app.put("/", (req, res) => {
+app.post("/", (req, res) => {
+  console.log(req.body);
   res.json({ a: 1 });
 });
 

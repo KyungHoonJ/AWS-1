@@ -1,0 +1,91 @@
+#list,
+#list ul {
+  padding: 0;
+}
+
+#list li {
+  display: block;
+}
+
+#list .header {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+#list .item {
+  border-bottom: 1px solid lightgray;
+}
+
+#list .item:hover {
+  background-color: beige;
+}
+
+#list .item a {
+  text-decoration: none;
+  color: black;
+}
+
+#list .notice .row {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#list .row {
+  display: flex;
+}
+
+#list .row li {
+  padding: 0.5rem 1rem;
+  min-width: 2rem;
+  border-right: 1px dotted gray;
+}
+
+#list .row li:last-child {
+  border-right: none;
+}
+
+#list .row li.title {
+  flex: 1;
+}
+
+#list .row li.writer,
+#list .row li.createdAt {
+  min-width: 8rem;
+}
+
+#list .row li.view,
+#list .row li.like {
+  min-width: 3rem;
+}
+
+#nav {
+  position: relative;
+}
+
+#nav nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#nav a {
+  text-decoration: none;
+}
+
+#nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#nav ul li {
+  display: block;
+}
+
+#nav #write {
+  position: absolute;
+  right: 1rem;
+}

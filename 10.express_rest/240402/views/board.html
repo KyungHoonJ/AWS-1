@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판</title>
+    <link rel="stylesheet" href="/static.css" />
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <h1 class="box-center">게시판</h1>
+      <ul id="list">
+        <li class="header">
+          <ul class="row">
+            <li class="num box-center">번호</li>
+            <li class="title box-center">제목</li>
+            <li class="writer box-center">글쓴이</li>
+            <li class="createdAt box-center">등록일</li>
+            <li class="view box-center">조회수</li>
+            <li class="like box-center">추천수</li>
+          </ul>
+        </li>
+        {{list}}
+      </ul>
+      <div id="nav">
+        <a href="/write"><button id="write">글쓰기</button></a>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
