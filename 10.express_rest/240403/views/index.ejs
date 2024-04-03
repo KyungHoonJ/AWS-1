@@ -1,0 +1,56 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p><%= name %></p>
+    <%- elem %>
+    <p>
+      &lt%= 는 innerText이고<br />
+      &lt%- 는 innerHTML이다
+    </p>
+    <% let a = 1; %>
+    <p><%= a %></p>
+
+    <% if(a < 10){ %>
+    <div>a는 10보다 작아요</div>
+    <% } %>
+
+    <% if(a > 10){ %>
+    <div>a는 10보다 커요</div>
+    <% } %>
+
+    <ul>
+      <% for(let i = 0; i < 10; i++){ %>
+      <li><%= i + 1 %> 번 말했다.</li>
+      <% } %>
+    </ul>
+    <ul id="list">
+      <li class="header">
+        <ul class="row">
+          <li class="num box-center">번호</li>
+          <li class="title box-center">제목</li>
+          <li class="writer box-center">글쓴이</li>
+          <li class="createdAt box-center">등록일</li>
+        </ul>
+      </li>
+      <% for(let i = 0; i < boards.length; ++i) { %>
+      <li class="item">
+        <ul class="row">
+          <li class="num"><%= boards[i].id %></li>
+          <li class="title"><%= boards[i].title %></li>
+          <li class="writer"><%= boards[i].writer %></li>
+          <li class="createdAt"><%= boards[i].createdAt %></li>
+        </ul>
+      </li>
+      <% } %>
+      <% boards.forEach(item=>{ %>
+      <%- include('board/item', item) %>
+      <% }) %>
+    </ul>
+  </body>
+</html>
