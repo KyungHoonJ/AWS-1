@@ -1,0 +1,13 @@
+.header h1 {
+  text-align: center;
+}
+
+.category {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.category li {
+  display: block;
+}

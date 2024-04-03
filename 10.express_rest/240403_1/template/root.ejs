@@ -1,0 +1,24 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/static.css">
+  </head>
+  <body>
+    <div id="root">
+      <div class="header">
+        <%- include('static/header', header) %>
+      </div>
+      <div>
+        <div class="list"></div>
+        <div class="container">
+          <%- include(container || 'static/404') %>
+        </div>
+      </div>
+      <div class="footer">
+        <%- include('static/footer') %>
+      </div>
+    </div>
+  </body>
+</html>

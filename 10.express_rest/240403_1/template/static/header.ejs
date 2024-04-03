@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/header.css">
+<div class="header">
+  <h1>정경훈의 임시 게시판</h1>
+  <nav>
+    <ul class="category">
+      <% if(categories.length) {%>
+      <% categories.forEach(({name, href})=>{ %>
+      <li>
+        <a href="<%= href %>"><%= name %></a>
+      </li>
+      <% }) %>
+      <% } else { %>
+      <li>목록 없음</li>
+      <% } %>
+    </ul>
+  </nav>
+</div>
