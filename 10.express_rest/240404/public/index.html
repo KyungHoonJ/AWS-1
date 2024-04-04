@@ -1,0 +1,40 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판</title>
+  </head>
+  <body>
+    <form action="/write" method="post" enctype="multipart/form-data">
+      <!-- Content-Type: x-www-form-urlencoded -->
+      <input id="input-img" type="file" name="img" accept="image/*" multiple />
+      <input type="hidden" name="name" value="testing" />
+      <button>upload</button>
+    </form>
+    <div id="preview"></div>
+    <script>
+      function createElement(name) {
+        return document.createElement(name);
+      }
+      function createImgElement(src, alt) {
+        const temp = createElement("img");
+        temp.src = src;
+        temp.alt = alt;
+        return temp;
+      }
+      document.getElementById("input-img").onchange = (e) => {
+        console.dir(e.target.files);
+        const parentElem = document.getElementById("preview");
+        parentElem.innerHTML = "";
+        [...e.target.files].forEach((file) => {
+          console.log(file);
+          parentElem.innerHTML += `<img src="${URL.createObjectURL(file)}"/>`;
+          //   const temp = document.createElement("img");
+          //   temp.src = URL.createObjectURL(file);
+          //   parentElem.append(temp);
+          //   parentElem.append(createImgElement(URL.createObjectURL(file)));
+        });
+      };
+    </script>
+  </body>
+</html>
