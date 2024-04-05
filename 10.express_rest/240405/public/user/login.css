@@ -1,0 +1,18 @@
+#login {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#login label {
+  display: inline-block;
+  width: 2.5rem;
+  text-align: end;
+}
+
+#login > div > :first-child {
+  margin-bottom: 0.5rem;
+}
+
+#login button {
+  height: 100%;
+}

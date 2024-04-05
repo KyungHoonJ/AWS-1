@@ -1,0 +1,24 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <% styles.forEach(item=>{ %>
+    <link rel="stylesheet" href="<%= item %>" />
+    <% }) %>
+  </head>
+  <body>
+    <div id="root" class="debug">
+      <div class="header">
+        <div class="container">
+          <h1><%= title %></h1>
+          <%- include('user/' + userTemplate) %>
+        </div>
+      </div>
+      <div class="container">
+        <div class="menu"></div>
+        <div class="contents"></div>
+      </div>
+    </div>
+  </body>
+</html>

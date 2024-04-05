@@ -1,0 +1,18 @@
+#regist {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#regist label {
+  display: inline-block;
+  width: 4rem;
+  text-align: end;
+}
+
+#regist > div > :first-child {
+  margin-bottom: 0.5rem;
+}
+
+#regist button {
+  height: 100%;
+}
