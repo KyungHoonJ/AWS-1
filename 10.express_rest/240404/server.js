@@ -35,16 +35,16 @@ app.use("/write", (req, res, next) => {
   console.log(imgs);
   next();
 });
-
+// console.log(upload.array("img").toString());
 // post(path:String, ...callback:Array(function))
 app.post("/write", upload.array("img"), (req, res) => {
   if (req.user) {
     //   console.log(req.cookies);
     //   // 1712192472453_dsfarevsr.png
-    console.log(req.headers);
-    console.log(req.body);
-    console.log(req.file);
-    console.log(req.files);
+    // console.log(req.headers);
+    // console.log(req.body);
+    // console.log(req.file);
+    // console.log(req.files);
     // res.cookie("file", req.file.filename);
   }
   res.redirect("/");
