@@ -1,0 +1,14 @@
+.contents {
+  padding: 1rem;
+}
+
+#title {
+  margin-top: 0;
+  border-bottom: 1px solid lightgray;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}

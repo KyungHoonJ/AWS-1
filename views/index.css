@@ -1,0 +1,43 @@
+#user-box {
+  margin: 0;
+}
+
+.login,
+.logout {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.login label {
+  display: inline-block;
+  width: 2.5rem;
+  text-align: end;
+}
+
+.login > div > :first-child {
+  margin-bottom: 0.5rem;
+}
+
+.login button,
+.logout button {
+  height: 100%;
+}
+
+.logout h4 {
+  margin: 0;
+}
+
+.menu #catalogue {
+  margin: 0;
+}
+
+.btn-list {
+  margin-top: 1rem;
+}
+
+.btn-list button {
+  width: 90%;
+  margin: auto;
+  padding: 0.5rem;
+}

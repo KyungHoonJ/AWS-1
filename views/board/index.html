@@ -1,0 +1,34 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글</title>
+    <link rel="stylesheet" href="/static.css" />
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/board/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="header">
+        <div class="container">
+          <h1>자유게시판</h1>
+          <form id="user-box" action="" method="post"></form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="menu">
+          <ul id="catalogue"></ul>
+        </div>
+        <div class="contents">
+          <h2 id="title"></h2>
+          <h4 class="info">
+            <span id="writer"></span>
+            <span id="createdAt"></span>
+          </h4>
+          <p id="text"></p>
+        </div>
+      </div>
+    </div>
+    <script src="/board/index.js"></script>
+  </body>
+</html>

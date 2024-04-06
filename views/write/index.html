@@ -1,0 +1,38 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글쓰기</title>
+    <link rel="stylesheet" href="/static.css" />
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/write/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="header">
+        <div class="container">
+          <h1>자유게시판</h1>
+          <form id="user-box" action="" method="post"></form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="menu">
+          <ul id="catalogue"></ul>
+        </div>
+        <div class="contents">
+          <form action="/write" method="post">
+            <div>
+              <label for="title">title : </label>
+              <input type="text" id="title" name="title" />
+            </div>
+            <div>
+              <textarea type="text" id="text" name="text"></textarea>
+            </div>
+            <button>글쓰기</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/write/index.js"></script>
+  </body>
+</html>
