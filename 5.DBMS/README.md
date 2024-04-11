@@ -239,4 +239,7 @@ sudo rm -rf /Library/PreferencePanes/My*
 
 ```bash
 brew install mysql@8.0
+echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 ```
