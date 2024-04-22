@@ -80,6 +80,24 @@ const user = {
 
     connection.end();
   },
+  get: (id) =>
+    new Promise((resolve, reject) => {
+      const connection = createConnection();
+      connection.connect();
+      connection.query(
+        "SELECT * FROM express_user WHERE user_id=? and deleted_at IS NULL",
+        [id],
+        (err, results, fields) => {
+          connection.end();
+          if (err) {
+            console.error(err);
+            reject(err);
+          } else {
+            resolve(results);
+          }
+        }
+      );
+    }),
 };
 
 module.exports = { init, user };

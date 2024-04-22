@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "aws",
+    "password": "1234qwER!@",
+    "database": "240422_sequelize",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "aws",
+    "password": "1234qwER!@",
+    "database": "AWS_TEST",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "aws",
+    "password": "1234qwER!@",
+    "database": "AWS_TEST",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  }
+}
