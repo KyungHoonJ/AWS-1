@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
   if(req.cookies.userId){
     res.data.list = await Todo.findAll({
       attributes:['content', 'id',
-        [sequelize.fn('count', Sequelize.col('Todos.id')), 'todoCnt']
+        [sequelize.fn('count', Sequelize.col('Todos.id')), 'todoCnt'],
       ],
       where:{
         todoId: null
@@ -22,12 +22,9 @@ router.get("/", async (req, res) => {
         attributes:[],
       }],
 
-      group:[Sequelize.col('Todo.id')]
+      group:[Sequelize.col('Todo.id')],
+      raw: true // toJSON
     });
-    if(res.data.list.length){
-      console.log(JSON.parse(JSON.stringify(res.data.list[0])))
-      console.log(res.data.list[0].todoCnt)
-    }
   }
 
   res.render("index", res.data);
