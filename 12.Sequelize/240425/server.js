@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 require("dotenv").config();
 
 const router = require("./router");
-const { sequelize } = require("./models");
+const { sequelize, User } = require("./models");
 
 const app = express();
 
@@ -23,6 +23,12 @@ app.use(router);
 sequelize
   .sync({ force: true })
   .then(() => {
+    User.create({
+      userId:'qwer',
+      pw:'qwer',
+      nick:'asdf'
+    })
+    
     app.listen(app.get("port"), () =>
       console.log(app.get("port"), "server open")
     );

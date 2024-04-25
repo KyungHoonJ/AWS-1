@@ -2,6 +2,13 @@
   <fieldset>
     <legend>Add Todo</legend>
     <input type="text" name="todo" placeholder="Todo contents" />
+    <% if(list.length > 0) { %>
+    <select name="parent">
+      <% for(const [idx, item] of list) { %>
+        <option value="<%= idx + 1 %>"><%= item %></option>
+      <% } %>
+    </select>
+    <% } %>
     <button>추가</button>
   </fieldset>
 </form>

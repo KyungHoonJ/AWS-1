@@ -1,13 +1,18 @@
 const router = require("express").Router();
+const {Todo} = require('../../models')
 
 router.use((req, res, next)=>{
   res.data = { user: null, regist: false, list: [] };
   next();
 })
 
-router.get("/", (req, res) => {
-  console.log(req.params.id)
+router.get("/", async (req, res) => {
   res.data.user = req.cookies.user;
+
+  if(req.cookies.userId){
+    res.data.list = await Todo.findAll();
+  }
+
   res.render("index", res.data);
 });
 

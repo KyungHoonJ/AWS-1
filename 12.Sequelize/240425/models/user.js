@@ -28,6 +28,10 @@ module.exports = (sequelize, Datatypes)=>{
                 timestamps: true
             })
         }
+        
+        static associate(db){
+            db.User.hasMany(db.Todo, {foreignKey:"userId", sourceKey:'id'})
+        }
     }
 
     return User.init();
