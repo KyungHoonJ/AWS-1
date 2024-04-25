@@ -1,0 +1,20 @@
+<div>
+  <div>
+    <h1><%= title %></h1>
+    <p>
+      <%= category.name %> | <%= parseInt((Date.now() - item.created_at) / 1000)
+      %>초 전 | <%= user_nick %>
+    </p>
+    <p>추천 : <%= recomment %></p>
+  </div>
+  <hr />
+  <div><%- content %></div>
+  <div style="display: flex">
+    <form action="<%= id %>/recomment/1" method="post">
+      <button>추천</button>
+    </form>
+    <form action="<%= id %>/recomment/-1" method="post">
+      <button>비추천</button>
+    </form>
+  </div>
+</div>

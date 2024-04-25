@@ -1,0 +1,25 @@
+<div id="board-list">
+  <ul>
+    <% for(const item of list){ %>
+    <li>
+      <a href="<%= item.category.href %>/<%= item.id %>">
+        <div class="list-item">
+          <div class="recomment"><%= item.recomment %></div>
+          <div class="info">
+            <div><%= item.title %></div>
+            <div>
+              <span><%= item.category.name %></span> |
+              <span
+                ><%= parseInt((Date.now() - item.created_at) / 1000) %>초
+                전</span
+              >
+              |
+              <span><%= item.user_nick %></span>
+            </div>
+          </div>
+        </div></a
+      >
+    </li>
+    <% } %>
+  </ul>
+</div>

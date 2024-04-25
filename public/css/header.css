@@ -1,0 +1,49 @@
+#header {
+  background-color: #28344e;
+}
+
+#header ul {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+}
+
+#header .first {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header .first ul {
+  flex: 1;
+  height: 40px;
+}
+
+#header .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+#header .sub {
+  height: 40px;
+  background-color: #46cfa7;
+}
+
+#header ul li {
+  display: flex;
+  height: 100%;
+  padding: 0.5rem;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+#header .sub li {
+  font-size: 1rem;
+}
+
+.main {
+  background-color: #46cfa7;
+}

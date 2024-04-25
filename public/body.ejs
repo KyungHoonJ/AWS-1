@@ -1,0 +1,21 @@
+<div id="body">
+  <div class="title container">
+    <img src="/imgs/board/icon-community-lol-v2.png" alt="" />
+    <div>
+      <h1>리그오브레전드</h1>
+      <span>온라인 708</span>
+    </div>
+  </div>
+  <div class="body container">
+    <div class="back-img"></div>
+    <div class="menu"><%- include('menu', menu) %></div>
+    <div class="board">
+      <% if(top && list){ %>
+      <div class="board-top"><%- include('board-top', top) %></div>
+      <div class="board-list"><%- include('board-list', list) %></div>
+      <% } else { %>
+      <div class="board-item"><%- include('board-item', item) %></div>
+      <% } %>
+    </div>
+  </div>
+</div>

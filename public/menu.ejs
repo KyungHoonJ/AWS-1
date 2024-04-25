@@ -1,0 +1,34 @@
+<div>
+  <div>
+    <a href="/user/login"><button>로그인</button></a>
+  </div>
+  <hr />
+  <div>
+    <a href="/">전체</a>
+  </div>
+  <hr />
+  <div>
+    <h4>정보</h4>
+    <ul>
+      <li>OP.GG 기획</li>
+      <li>유저 뉴스</li>
+      <li>팁과 노하우</li>
+      <li>패치노트</li>
+    </ul>
+  </div>
+  <hr />
+  <div>
+    <h4>커뮤니티</h4>
+    <ul>
+      <% for(const item of category){ %>
+      <li>
+        <a href="<%= item.href %>">
+          <div>
+            <span><%= item.name %></span>
+          </div>
+        </a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</div>

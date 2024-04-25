@@ -1,0 +1,42 @@
+<div id="body-top">
+  <div>
+    <select id="sel-cate" >
+      <option value="/">
+        <a href="/"> 전체 </a>
+      </option>
+      <% for(const item of category){ %>
+      <option value="<%= item.href %>" <%= item.default && 'selected' %>>
+        <a href="<%= item.href %>">
+          <span><%= item.name %></span>
+        </a>
+      </option>
+      <% } %>
+    </select>
+    <a href="/write"><button>글쓰기</button></a>
+  </div>
+  <div>
+    <ul>
+      <li>최신</li>
+      <li>인기</li>
+      <li>TOP</li>
+      <li>10추</li>
+      <li>
+        <form action="/">
+          <select name="search-target" id="">
+            <option value="1">제목</option>
+            <option value="1">내용</option>
+            <option value="1">제목+내용</option>
+            <option value="1">작성자</option>
+          </select>
+          <input type="text" name="search" />
+          <button>검색</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+  <script>
+    document.getElementById("sel-cate").onchange = (e) => {
+      location.href = e.target.value;
+    };
+  </script>
+</div>
