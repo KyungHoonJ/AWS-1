@@ -9,7 +9,7 @@
       <%- user ? include('user-info') : 
           regist ? include('regist') : 
           include('login') %>
-      <%- user && include('add-box') %>
+      <%- user && include('add-box', list) %>
       <%- include('todo-list', list) %>
     </div>
   </body>

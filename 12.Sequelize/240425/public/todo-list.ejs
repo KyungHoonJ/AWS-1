@@ -1,0 +1,13 @@
+<ul>
+    <% for(const item of list) { %>
+        <li value="<%= item.id %>">
+          <%= item.content %>
+          <%# if(item.Todos.length > 0) { %>
+            <div>
+                <%#= item.Todos.filter(v=>v.isComplete).length %>
+                 / <%#= item.Todos.length %><%= item.todoCount %>
+            </div>
+          <%# } %>
+        </li>
+      <% } %>
+</ul>

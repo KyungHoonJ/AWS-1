@@ -1,11 +1,14 @@
 <form action="/api/todo/add" method="post">
   <fieldset>
     <legend>Add Todo</legend>
-    <input type="text" name="todo" placeholder="Todo contents" />
+    <input type="text" name="content" placeholder="Todo contents" />
     <% if(list.length > 0) { %>
-    <select name="parent">
-      <% for(const [idx, item] of list) { %>
-        <option value="<%= idx + 1 %>"><%= item %></option>
+    <select name="todoId">
+      <option value=""></option>
+      <% for(const item of list) { %>
+        <option value="<%= item.id %>">
+          <%= item.content %>
+        </option>
       <% } %>
     </select>
     <% } %>
