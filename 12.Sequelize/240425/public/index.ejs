@@ -1,0 +1,16 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘의 할일~</title>
+  </head>
+  <body>
+    <div id="root">
+      <%- user ? include('user-info') : 
+          regist ? include('regist') : 
+          include('login') %>
+      <%- user && include('add-box') %>
+      <%- include('todo-list', list) %>
+    </div>
+  </body>
+</html>

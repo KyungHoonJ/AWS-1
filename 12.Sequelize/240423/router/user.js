@@ -285,12 +285,11 @@ router.get("/test", async (req, res) => {
   //   res.send([...(await UserCrypto.findAll()), ...(await UserInfo.findAll())]);
   res.send(
     await UserCrypto.findAll({
-      where: {},
-      attributes: ["userId", "phone"],
+      attributes: { exclude: ["deletedAt"] },
       include: [
         {
           model: UserInfo,
-          attributes: ["name", "nick"],
+          attributes: { exclude: ["deletedAt"] },
         },
       ],
     })
