@@ -1,6 +1,6 @@
 # EC2
 
-- Elastic Compute Clude
+- Elastic Compute Cloud
 - 탄력적 컴퓨트 클라우드
 
 ## DNS
