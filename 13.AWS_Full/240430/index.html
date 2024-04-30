@@ -3,6 +3,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>전체 게시판 - 리그오브레전드</title>
+    <link rel="stylesheet" href="./index.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="root">
+      <div class="board">
+        <div class="background"></div>
+        <div class="container z-1">
+          <div class="header">
+            <div class="img-box">
+              <img src="./imgs/icon-community-lol-v2.png" alt="" />
+            </div>
+            <div class="text-box">
+              <h1 class="title">리그오브레전드</h1>
+              <p class="online"><span class="dot"></span> 온라인 590</p>
+            </div>
+          </div>
+          <div class="body">
+            <div class="left-bar">
+              <div>
+                <a href="./">
+                  <button>로그인</button>
+                </a>
+              </div>
+              <ul class="category-list" id="category-list">
+                <li>
+                  <a href="./"><h4>전체</h4></a>
+                </li>
+                <li>
+                  <a href="./"><h4>정보</h4></a>
+                </li>
+              </ul>
+            </div>
+            <div class="list-box"></div>
+            <div class="right-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
 </html>

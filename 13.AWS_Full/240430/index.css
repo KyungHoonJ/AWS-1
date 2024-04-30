@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  background-color: #ebeef1;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1350px;
+  margin: auto;
+}
+
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.test {
+  height: 100px;
+  background-color: red;
+}
+
+.board {
+  position: relative;
+}
+
+.board .background {
+  width: 100%;
+  height: 13rem;
+  background: url("./imgs/bg_lol.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  /* z-index: 1; */
+}
+
+.board .background::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  background-color: black;
+  opacity: 0.4;
+}
+
+.board .header {
+  display: flex;
+  padding-top: 3rem;
+  height: 7rem;
+  align-items: center;
+}
+
+.board .header .img-box {
+  width: 4rem;
+  padding-right: 0.5rem;
+}
+
+.board .header .text-box .title {
+  color: white;
+  margin: 0;
+}
+
+.board .header .text-box .online {
+  color: #46cfa7;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.board .header .text-box .online .dot {
+  display: inline-block;
+  background-color: #46cfa7;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+}
+
+.board .body {
+  display: flex;
+  gap: 1rem;
+}
+
+.board .body .left-bar,
+.board .body .right-bar {
+  width: 20rem;
+  background-color: white;
+}
+
+.board .body .left-bar > div {
+  padding: 1rem;
+  border: 1px solid #c5cbd0;
+}
+
+.board .body .left-bar > div button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #46cfa7;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.board .body .left-bar .category-list {
+  margin: 0;
+  padding: 0;
+}
+
+.board .body .left-bar .category-list li {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #c5cbd0;
+  border-top: none;
+}
+
+.board .body .left-bar .category-list li a {
+  color: black;
+  text-decoration: none;
+}
+
+.board .body .left-bar .category-list li h4 {
+  margin: 0;
+}
+
+.board .body .list-box {
+  flex: 1;
+}
