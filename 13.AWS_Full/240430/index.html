@@ -27,15 +27,54 @@
                 </a>
               </div>
               <ul class="category-list" id="category-list">
-                <li>
+                <!-- <li>
                   <a href="./"><h4>전체</h4></a>
                 </li>
                 <li>
-                  <a href="./"><h4>정보</h4></a>
-                </li>
+                  <a href="./">
+                    <h4>정보<span>&gt</span></h4>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="./"><span>OP.GG 기획</span></a>
+                    </li>
+                    <li>
+                      <a href="./"><span>유저 뉴스</span></a>
+                    </li>
+                  </ul>
+                </li> -->
               </ul>
             </div>
-            <div class="list-box"></div>
+            <div class="list-box">
+              <div class="header">
+                <div class="selector-box">
+                  <select name="category" id="category">
+                    <option value="all">전체</option>
+                  </select>
+                  <a href="./">
+                    <span><img src="./imgs/icon-write.png" alt="" /></span>
+                  </a>
+                </div>
+                <div class="sortor-box">
+                  <a href="./"><span>최신</span></a>
+                  <a href="./"><span>인기</span></a>
+                  <a href="./"><span>top</span></a>
+                  <a href="./"><span>10추</span></a>
+                  <form action="">
+                    <select name="" id="">
+                      <option value="">제목</option>
+                      <option value="">내용</option>
+                      <option value="" selected>제목+내용</option>
+                      <option value="">작성자</option>
+                    </select>
+                    <input type="text" placeholder="검색" />
+                    <button>
+                      <img src="./imgs/icon-search@2x.png" alt="" />
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
             <div class="right-bar"></div>
           </div>
         </div>

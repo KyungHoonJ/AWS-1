@@ -109,7 +109,7 @@ img {
 
 .board .body .left-bar .category-list li {
   display: block;
-  padding: 1rem;
+  padding: 0.5rem;
   border: 1px solid #c5cbd0;
   border-top: none;
 }
@@ -121,8 +121,102 @@ img {
 
 .board .body .left-bar .category-list li h4 {
   margin: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.board .body .left-bar .category-list li h4 span {
+  float: right;
+}
+
+.board .body .left-bar .category-list li ul {
+  margin: 0;
+  padding: 0;
+}
+
+.board .body .left-bar .category-list li ul li {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.board .body .left-bar .category-list li ul li span {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.board .body .left-bar .category-list li h4:hover,
+.board .body .left-bar .category-list li ul li span:hover {
+  background-color: #ebeef1;
 }
 
 .board .body .list-box {
   flex: 1;
+}
+
+.board .body .list-box .header {
+  background-color: white;
+  display: block;
+  padding: 0;
+  height: auto;
+  border: 1px solid#c5cbd0;
+}
+
+.board .body .list-box .header .selector-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.board .body .list-box .header .selector-box select {
+  font-size: 1.2rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .header .sortor-box {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.board .body .list-box .header .sortor-box span {
+  padding: 0.5rem;
+}
+
+.board .body .list-box .header .sortor-box form {
+  flex: 1;
+  display: flex;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.board .body .list-box .header .sortor-box form select {
+  border: 1px solid #ebeef1;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .header .sortor-box form input {
+  background-color: #ebeef1;
+  flex: 1;
+  border: none;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .header .sortor-box form input::placeholder {
+  color: black;
+}
+
+.board .body .list-box .header .sortor-box form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.1rem;
+  border: none;
+  padding: 0.3rem;
+  background-color: #ebeef1;
 }
