@@ -1,0 +1,308 @@
+body {
+  margin: 0;
+  background-color: #ebeef1;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.z-0 {
+  position: relative;
+  z-index: 2;
+}
+
+.board {
+  position: relative;
+}
+
+.board .background-img {
+  position: absolute;
+  background: url("../imgs/bg_lol.jpg");
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.board .background-img::before {
+  content: "";
+  background-color: rgb(0, 0, 05);
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.5;
+}
+
+.board .header {
+  padding-top: 4rem;
+  display: flex;
+  height: 5rem;
+  align-items: center;
+}
+
+.board .header .img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+.board .header .img img {
+  width: 100%;
+}
+
+.board .header .text h1 {
+  color: white;
+  margin: 0;
+}
+
+.board .header .text p {
+  color: #46cfa7;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+}
+
+.board .header .text p span {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: #46cfa7;
+  margin-right: 0.5em;
+}
+
+.board .body {
+  display: flex;
+  gap: 1rem;
+}
+
+.board .body .menu {
+  background-color: white;
+  width: 20rem;
+  height: fit-content;
+  position: sticky;
+  top: 0;
+}
+
+.board .body .menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+.board .body .menu div,
+.board .body .menu ul li {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ebeef1;
+}
+
+.board .body .menu div {
+  padding: 1rem;
+}
+
+.board .body .menu ul li {
+  border-top: none;
+}
+
+.board .body .menu ul li h4 {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.board .body .menu ul li h4 span {
+  float: right;
+}
+
+.board .body .menu ul li ul li {
+  border: none;
+  padding: 0;
+}
+
+.board .body .menu ul li ul li span {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.board .body .menu ul li h4:hover,
+.board .body .menu ul li ul li span:hover {
+  background-color: #f8f9fa;
+}
+
+.board .body .menu div button {
+  width: 100%;
+  height: 2.5rem;
+  color: white;
+  background-color: #46cfa7;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.board .body .list-box {
+  flex: 1;
+}
+
+.board .body .list-box .item {
+  background-color: white;
+}
+
+.board .body .list-box .item .header {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid #ebeef1;
+}
+
+.board .body .list-box .item .header h2 {
+  margin: 0;
+}
+
+.board .body .list-box .item .header .info {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.5;
+}
+
+.board .body .list-box .item .content {
+  border: 1px solid #ebeef1;
+  border-top: none;
+  padding: 1.5rem;
+}
+
+.board .body .list-box .item .content img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.board .body .list-box .item .btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ebeef1;
+  border-top: none;
+}
+
+.board .body .list-box .item .btns button {
+  background-color: white;
+  padding: 0.5rem 1.5rem;
+  opacity: 0.5;
+  border: 1px solid lightgray;
+}
+
+.board .body .list-box .comment-box {
+  background-color: white;
+  margin-top: 0.5rem;
+  border: 1px solid #ebeef1;
+}
+
+.board .body .list-box .comment-box .header {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  height: auto;
+}
+
+.board .body .list-box .comment-box .header h3 {
+  margin: 0;
+}
+
+.board .body .list-box .comment-box .header h3 span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.board .body .list-box .comment-box .header h3 span .comment {
+  color: #16ae81;
+}
+
+.board .body .list-box .comment-box form {
+  padding: 1rem;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+.board .body .list-box .comment-box form textarea {
+  width: 100%;
+  height: 5rem;
+  resize: none;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.board .body .list-box .comment-box .comment-list .comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 6rem;
+}
+
+.board .body .list-box .list {
+  margin: 0;
+  margin-top: 0.5rem;
+  background-color: white;
+  padding: 0;
+  border-top: 1px solid #ebeef1;
+}
+
+.board .body .list-box .list li {
+  display: block;
+  border: 1px solid #ebeef1;
+  border-top: none;
+}
+
+.board .body .list-box .list li > a > div {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .list li .like {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.5;
+}
+
+.board .body .list-box .list li .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .list li .title {
+  color: black;
+  margin: 0;
+}
+
+.board .body .list-box .list li .title .comment {
+  color: #16ae81;
+}
+
+.board .body .list-box .list li .info {
+  color: #8b99a6;
+  margin: 0;
+}
+
+.board .body .list-box .list li img {
+  width: 6rem;
+  height: 4rem;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container {
+    max-width: 1050px;
+  }
+}

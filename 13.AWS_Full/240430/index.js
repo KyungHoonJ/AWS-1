@@ -64,3 +64,32 @@ categoryList.forEach((cate1) => {
   }
   cateElem.innerHTML += str;
 });
+
+const tempArr = [...categoryList];
+const cateSeleElem = document.getElementById("category");
+
+for (let i = 0; i < tempArr.length; ++i) {
+  cateSeleElem.innerHTML += `<option value="${tempArr[i].href}">${tempArr[i].name}</option>`;
+  if (tempArr[i].categorys) tempArr.push(...tempArr[i].categorys);
+}
+
+const listElem = document.getElementById("list");
+
+for (let i = 0; i < 40; i++)
+  listElem.innerHTML += `<li>
+<a href="./">
+  <div class="item">
+    <div class="like">
+      <p>▲</p>
+      <p>123</p>
+    </div>
+    <div class="text">
+      <h4>단톡방 자아분열 <span>[32]</span></h4>
+      <p>유머 | 2시간 전 | 더레이더</p>
+    </div>
+    <div class="img">
+      <img src="./imgs/bg_lol.jpg" alt="" />
+    </div>
+  </div>
+</a>
+</li>`;
