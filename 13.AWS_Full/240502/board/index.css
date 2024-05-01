@@ -1,0 +1,369 @@
+body {
+  margin: 0;
+  background-color: #ebeef1;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1350px;
+  margin: auto;
+}
+
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.test {
+  height: 100px;
+  background-color: red;
+}
+
+.board {
+  position: relative;
+}
+
+.board .background {
+  width: 100%;
+  height: 13rem;
+  background: url("../imgs/bg_lol.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  /* z-index: 1; */
+}
+
+.board .background::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  background-color: black;
+  opacity: 0.4;
+}
+
+.board .header {
+  display: flex;
+  padding-top: 3rem;
+  height: 7rem;
+  align-items: center;
+}
+
+.board .header .img-box {
+  width: 4rem;
+  padding-right: 0.5rem;
+}
+
+.board .header .text-box .title {
+  color: white;
+  margin: 0;
+}
+
+.board .header .text-box .online {
+  color: #46cfa7;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.board .header .text-box .online .dot {
+  display: inline-block;
+  background-color: #46cfa7;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+}
+
+.board .body {
+  display: flex;
+  gap: 1rem;
+}
+
+.board .body .left-bar,
+.board .body .right-bar {
+  width: 20rem;
+  background-color: white;
+  height: fit-content;
+  position: sticky;
+  top: 0;
+}
+
+.board .body .left-bar > div {
+  padding: 1rem;
+  border: 1px solid #c5cbd0;
+}
+
+.board .body .left-bar > div button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #46cfa7;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.board .body .left-bar .category-list {
+  margin: 0;
+  padding: 0;
+}
+
+.board .body .left-bar .category-list li {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid #c5cbd0;
+  border-top: none;
+}
+
+.board .body .left-bar .category-list li a {
+  color: black;
+  text-decoration: none;
+}
+
+.board .body .left-bar .category-list li h4 {
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.board .body .left-bar .category-list li h4 span {
+  float: right;
+}
+
+.board .body .left-bar .category-list li ul {
+  margin: 0;
+  padding: 0;
+}
+
+.board .body .left-bar .category-list li ul li {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.board .body .left-bar .category-list li ul li span {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.board .body .left-bar .category-list li h4:hover,
+.board .body .left-bar .category-list li ul li span:hover {
+  background-color: #ebeef1;
+}
+
+.board .body .left-bar .link-list {
+  margin: 0;
+  border: 1px solid #c5cbd0;
+  border-top: none;
+  padding: 0.5rem;
+}
+
+.board .body .left-bar .link-list li {
+  display: block;
+  padding: 0.5rem;
+}
+
+.board .body .left-bar .link-list li .link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: black;
+}
+
+.board .body .left-bar .link-list li .img-box {
+  width: 2rem;
+}
+
+.board .body .list-box {
+  flex: 1;
+}
+
+.board .body .list-box .item-box {
+  background-color: white;
+  display: block;
+  padding: 0;
+  height: auto;
+  border: 1px solid#c5cbd0;
+  z-index: 2;
+}
+
+.board .body .list-box .item-box .header {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid #ebeef1;
+  height: auto;
+}
+
+.board .body .list-box .item-box .header h2 {
+  margin: 0;
+}
+
+.board .body .list-box .item-box .header .info {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.5;
+}
+
+.board .body .list-box .item-box .content {
+  border: 1px solid #ebeef1;
+  border-top: none;
+  padding: 1.5rem;
+}
+
+.board .body .list-box .item-box .content img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.board .body .list-box .item-box .btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ebeef1;
+  border-top: none;
+}
+
+.board .body .list-box .item-box .btns button {
+  background-color: white;
+  padding: 0.5rem 1.5rem;
+  opacity: 0.5;
+  border: 1px solid lightgray;
+}
+
+.board .body .list-box .comment-box {
+  background-color: white;
+  margin-top: 0.5rem;
+  border: 1px solid #c5cbd0;
+}
+
+.board .body .list-box .comment-box .header {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  height: auto;
+}
+
+.board .body .list-box .comment-box .header h3 {
+  margin: 0;
+}
+
+.board .body .list-box .comment-box .header h3 span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.board .body .list-box .comment-box .header h3 span .comment {
+  color: #16ae81;
+}
+
+.board .body .list-box .comment-box form {
+  padding: 1rem;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+.board .body .list-box .comment-box form textarea {
+  width: 100%;
+  height: 5rem;
+  resize: none;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.board .body .list-box .comment-box .comment-list .comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 6rem;
+}
+
+.board .body .list-box .list {
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+  border-top: 1px solid #c5cbd0;
+}
+
+.board .body .list-box .list li {
+  display: block;
+  background-color: white;
+  border: 1px solid #c5cbd0;
+  border-top: none;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .list li a {
+  color: black;
+  text-decoration: none;
+}
+
+.board .body .list-box .list .item {
+  display: flex;
+}
+
+.board .body .list-box .list .item .like,
+.board .body .list-box .list .item .img {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.board .body .list-box .list .item .like p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+.board .body .list-box .list .item .like p:first-child {
+  opacity: 0.2;
+}
+
+.board .body .list-box .list .item .text {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .list .item .text * {
+  margin: 0;
+}
+
+.board .body .list-box .list .item .text h4 span {
+  color: #46cfa7;
+  font-size: 0.9rem;
+}
+
+.board .body .list-box .list .item .text p {
+  opacity: 0.5;
+}
+
+.board .body .list-box .list .item .img {
+  width: 6rem;
+}
+
+.board .body .list-box .list .item .img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container {
+    max-width: 1050px;
+  }
+
+  .right-bar {
+    display: none;
+  }
+}
