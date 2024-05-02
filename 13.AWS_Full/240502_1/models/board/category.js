@@ -31,7 +31,13 @@ export default class Category extends Model {
 
   static associate({ Category, Board }) {
     Category.hasMany(Board);
-    Category.hasMany(Category);
-    Category.belongsTo(Category);
+    Category.hasMany(Category, {
+      as: "children",
+      foreignKey: "categoryId",
+    });
+    Category.belongsTo(Category, {
+      as: "parent",
+      foreignKey: "categoryId",
+    });
   }
 }
