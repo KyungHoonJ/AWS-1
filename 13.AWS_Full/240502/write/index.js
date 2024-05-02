@@ -87,23 +87,18 @@ linkList.forEach((link) => {
   </li>`;
 });
 
-const listElem = document.getElementById("list");
+const cateListElem = document.getElementById("category");
+cateListElem.innerHTML += `<option value="0">채널 선택</option>`;
+const tempArr = [];
 
-for (let i = 0; i < 40; i++)
-  listElem.innerHTML += `<li>
-<a href="./">
-  <div class="item">
-    <div class="like">
-      <p>▲</p>
-      <p>123</p>
-    </div>
-    <div class="text">
-      <h4>단톡방 자아분열 <span>[32]</span></h4>
-      <p>유머 | 2시간 전 | 더레이더</p>
-    </div>
-    <div class="img">
-      <img src="../imgs/bg_lol.jpg" alt="" />
-    </div>
-  </div>
-</a>
-</li>`;
+categoryList.forEach((item) => {
+  item.categorys?.length && tempArr.push(...item.categorys);
+});
+tempArr.forEach((item, idx) => {
+  item.isWrite &&
+    (cateListElem.innerHTML += `<option value="${idx}">${item.name}</option>`);
+});
+
+ClassicEditor.create(document.querySelector("#editor")).catch((error) => {
+  console.error(error);
+});
