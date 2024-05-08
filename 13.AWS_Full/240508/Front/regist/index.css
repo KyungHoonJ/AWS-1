@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  min-height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ebeef1;
+}
+
+.header .logo {
+  color: black;
+}
+
+.header .global button {
+  background-color: white;
+  border: none;
+}
+
+.header .global button svg {
+  opacity: 0.6;
+}
+
+.body {
+  /* height: calc(100% - 10rem); */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body .user-box {
+  max-width: 25rem;
+}
+
+.body .user-box h1,
+.body .user-box p {
+  word-break: keep-all;
+}
+
+.body .user-box p {
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+}
+
+.body .user-box form > * {
+  display: block;
+}
+
+.body .user-box form fieldset {
+  border-radius: 0.5rem;
+  border: 1px solid #c5cbd0;
+  margin: 1rem 0;
+}
+
+.body .user-box form fieldset input {
+  width: 100%;
+  border: none;
+  padding: 0.2rem;
+  outline: none;
+}
+
+.body .user-box form .search-pw {
+  text-decoration: underline;
+  margin: 0.5rem 0;
+}
+
+.body .user-box form .keep {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 1rem 0;
+}
+
+.body .user-box form .keep input {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.body .user-box form .login-btn {
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  background-color: #c5cbd0;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.body .user-box form .disposable {
+  color: blue;
+  margin: 1rem auto;
+  width: fit-content;
+  opacity: 0.7;
+}
+
+.body .user-box .hr {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.body .user-box .hr hr {
+  flex: 1;
+  opacity: 0.5;
+}
+
+.body .user-box .o-auth {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.body .user-box .regist {
+  color: blue;
+  opacity: 0.7;
+}
+
+.footer {
+  min-height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer a:last-child {
+  font-weight: bold;
+}
+
+.err {
+  color: red;
+}

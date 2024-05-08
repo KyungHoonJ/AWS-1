@@ -1,0 +1,338 @@
+body {
+  margin: 0;
+  background-color: #ebeef1;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1350px;
+  margin: auto;
+}
+
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.test {
+  height: 100px;
+  background-color: red;
+}
+
+.board {
+  position: relative;
+}
+
+.board .background {
+  width: 100%;
+  height: 13rem;
+  background: url("./imgs/bg_lol.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  /* z-index: 1; */
+}
+
+.board .background::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  background-color: black;
+  opacity: 0.4;
+}
+
+.board .header {
+  display: flex;
+  padding-top: 3rem;
+  height: 7rem;
+  align-items: center;
+}
+
+.board .header .img-box {
+  width: 4rem;
+  padding-right: 0.5rem;
+}
+
+.board .header .text-box .title {
+  color: white;
+  margin: 0;
+}
+
+.board .header .text-box .online {
+  color: #46cfa7;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.board .header .text-box .online .dot {
+  display: inline-block;
+  background-color: #46cfa7;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+}
+
+.board .body {
+  display: flex;
+  gap: 1rem;
+}
+
+.board .body .left-bar,
+.board .body .right-bar {
+  width: 20rem;
+  background-color: white;
+  height: fit-content;
+  position: sticky;
+  top: 0;
+}
+
+.board .body .left-bar > div {
+  padding: 1rem;
+  border: 1px solid #c5cbd0;
+}
+
+.board .body .left-bar > div button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #46cfa7;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.board .body .left-bar .category-list {
+  margin: 0;
+  padding: 0;
+}
+
+.board .body .left-bar .category-list li {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid #c5cbd0;
+  border-top: none;
+}
+
+.board .body .left-bar .category-list li a {
+  color: black;
+  text-decoration: none;
+}
+
+.board .body .left-bar .category-list li h4 {
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.board .body .left-bar .category-list li h4 span {
+  float: right;
+}
+
+.board .body .left-bar .category-list li ul {
+  margin: 0;
+  padding: 0;
+}
+
+.board .body .left-bar .category-list li ul li {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.board .body .left-bar .category-list li ul li span {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.board .body .left-bar .category-list li h4:hover,
+.board .body .left-bar .category-list li ul li span:hover {
+  background-color: #ebeef1;
+}
+
+.board .body .left-bar .link-list {
+  margin: 0;
+  border: 1px solid #c5cbd0;
+  border-top: none;
+  padding: 0.5rem;
+}
+
+.board .body .left-bar .link-list li {
+  display: block;
+  padding: 0.5rem;
+}
+
+.board .body .left-bar .link-list li .link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: black;
+}
+
+.board .body .left-bar .link-list li .img-box {
+  width: 2rem;
+}
+
+.board .body .list-box {
+  flex: 1;
+}
+
+.board .body .list-box .header {
+  background-color: white;
+  display: block;
+  padding: 0;
+  height: auto;
+  border: 1px solid#c5cbd0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.board .body .list-box .header .selector-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.board .body .list-box .header .selector-box select {
+  font-size: 1.2rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .header .sortor-box {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.board .body .list-box .header .sortor-box span {
+  padding: 0.5rem;
+}
+
+.board .body .list-box .header .sortor-box form {
+  flex: 1;
+  display: flex;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.board .body .list-box .header .sortor-box form select {
+  border: 1px solid #ebeef1;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .header .sortor-box form input {
+  background-color: #ebeef1;
+  flex: 1;
+  border: none;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .header .sortor-box form input::placeholder {
+  color: black;
+}
+
+.board .body .list-box .header .sortor-box form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.1rem;
+  border: none;
+  padding: 0.3rem;
+  background-color: #ebeef1;
+}
+
+.board .body .list-box .list {
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+  border-top: 1px solid #c5cbd0;
+}
+
+.board .body .list-box .list li {
+  display: block;
+  background-color: white;
+  border: 1px solid #c5cbd0;
+  border-top: none;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .list li a {
+  color: black;
+  text-decoration: none;
+}
+
+.board .body .list-box .list .item {
+  display: flex;
+}
+
+.board .body .list-box .list .item .like,
+.board .body .list-box .list .item .img {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.board .body .list-box .list .item .like p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+.board .body .list-box .list .item .like p:first-child {
+  opacity: 0.2;
+}
+
+.board .body .list-box .list .item .text {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.board .body .list-box .list .item .text * {
+  margin: 0;
+}
+
+.board .body .list-box .list .item .text h4 span {
+  color: #46cfa7;
+  font-size: 0.9rem;
+}
+
+.board .body .list-box .list .item .text p {
+  opacity: 0.5;
+}
+
+.board .body .list-box .list .item .img {
+  width: 6rem;
+}
+
+.board .body .list-box .list .item .img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container {
+    max-width: 1050px;
+  }
+
+  .right-bar {
+    display: none;
+  }
+}

@@ -1,0 +1,68 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전체 게시판 - 리그오브레전드</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="board">
+        <div class="background"></div>
+        <div class="container z-1">
+          <div class="header">
+            <div class="img-box">
+              <img src="./imgs/icon-community-lol-v2.png" alt="" />
+            </div>
+            <div class="text-box">
+              <h1 class="title">리그오브레전드</h1>
+              <p class="online"><span class="dot"></span> 온라인 590</p>
+            </div>
+          </div>
+          <div class="body">
+            <div class="left-bar">
+              <div>
+                <a href="./">
+                  <button>로그인</button>
+                </a>
+              </div>
+              <ul class="category-list" id="category-list"></ul>
+              <ul class="link-list" id="link-list"></ul>
+            </div>
+            <div class="list-box">
+              <div class="header">
+                <div class="selector-box">
+                  <select name="category" id="category"></select>
+                  <a href="./">
+                    <span><img src="./imgs/icon-write.png" alt="" /></span>
+                  </a>
+                </div>
+                <div class="sortor-box">
+                  <a href="./"><span>최신</span></a>
+                  <a href="./"><span>인기</span></a>
+                  <a href="./"><span>top</span></a>
+                  <a href="./"><span>10추</span></a>
+                  <form action="">
+                    <select name="" id="">
+                      <option value="">제목</option>
+                      <option value="">내용</option>
+                      <option value="" selected>제목+내용</option>
+                      <option value="">작성자</option>
+                    </select>
+                    <input type="text" placeholder="검색" />
+                    <button>
+                      <img src="./imgs/icon-search@2x.png" alt="" />
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <ul class="list" id="list"></ul>
+            </div>
+            <div class="right-bar">대충 오른쪽 바라는 것</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
