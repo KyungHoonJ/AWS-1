@@ -1,4 +1,5 @@
 export default async (req, res) => {
+  console.log(req.body.id);
   try {
     if (req.user) {
       res.json({ user: req.user.nick });

@@ -118,12 +118,23 @@ for (let i = 0; i < 40; i++)
 
 const userInfoElem = document.getElementById("user-info");
 (async () => {
+  // const user = (
+  //   await axios({
+  //     method: "post",
+  //     url: "http://localhost:8000/user/info",
+  //     withCredentials: true,
+  //   })
+  // ).data;
+
   const user = (
-    await axios({
-      method: "post",
-      url: "http://localhost:8000/user/info",
-      withCredentials: true,
-    })
+    await axios.post(
+      "http://localhost:8000/user/info", // url
+      { id: 1 }, // body
+      {
+        // options
+        withCredentials: true,
+      }
+    )
   ).data;
 
   console.log(user.user);

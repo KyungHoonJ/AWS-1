@@ -39,19 +39,31 @@ form.onsubmit = async (e) => {
   if (!isEmail || !isPw) return;
 
   try {
-    const response = await fetch("http://localhost:8000/user/login", {
-      method: "post",
-      mode: "cors",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        email: form.email.value,
-        pw: form.pw.value,
-      }),
-      credentials: "include",
-    });
-    console.log(response.status);
-    const text = await response.text();
-    console.log(text);
+    // const response = await fetch("http://localhost:8000/user/login", {
+    //   method: "post",
+    //   mode: "cors",
+    //   headers: { "content-type": "application/json" },
+    //   body: JSON.stringify({
+    //     email: form.email.value,
+    //     pw: form.pw.value,
+    //   }),
+    //   credentials: "include",
+    // });
+    // console.log(response.status);
+    // const text = await response.text();
+    // console.log(text);
+
+    const user = (
+      await axios.post(
+        "http://localhost:8000/user/login", // url
+        { email: form.email.value, pw: form.pw.value }, // body
+        {
+          // options
+          withCredentials: true,
+        }
+      )
+    ).data;
+    console.log(user);
   } catch (err) {
     console.error(err);
   }
