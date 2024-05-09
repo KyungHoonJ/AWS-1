@@ -64,6 +64,9 @@ form.onsubmit = async (e) => {
       )
     ).data;
     console.log(user);
+    if (user.result == "ok") {
+      location.href = "http://localhost";
+    }
   } catch (err) {
     console.error(err);
   }
