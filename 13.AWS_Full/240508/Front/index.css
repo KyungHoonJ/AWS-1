@@ -327,6 +327,107 @@ a {
   object-fit: cover;
 }
 
+.board .body .left-bar #user-info .user-level {
+  display: flex;
+}
+
+.board .body .left-bar #user-info .user-level .level-img {
+  width: 4rem;
+  height: 4rem;
+  padding-right: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.board .body .left-bar #user-info .user-level .name-level {
+  flex: 1;
+}
+
+.board .body .left-bar #user-info .user-level .name-level .user-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.board .body .left-bar #user-info .user-level .name-level .user-now-level {
+  color: #46cfa7;
+}
+
+.board .body .left-bar #user-info .user-level .name-level .user-level-bar {
+  background-color: rgb(201, 198, 198);
+  height: 0.5rem;
+  margin: 0.2rem 0;
+  border-radius: 0.5rem;
+}
+
+.board .body .left-bar #user-info .user-level .name-level .next-level {
+  color: rgb(201, 198, 198);
+  text-align: end;
+}
+
+.board .body .left-bar #user-info .user-menu .user-write-comment {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.board .body .left-bar #user-info .user-menu .user-write-comment div {
+  width: 48%;
+}
+
+.board .body .left-bar #user-info .user-menu .user-write-comment button {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: 46cfa7;
+  border: 1px solid #46cfa7;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.board .body .left-bar #user-info .user-menu .user-ward-write {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.board .body .left-bar #user-info .user-menu .user-ward-write div {
+  width: 48%;
+}
+
+.board .body .left-bar #user-info .user-menu .user-ward-write button {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: 46cfa7;
+  border: 1px solid #46cfa7;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.board
+  .body
+  .left-bar
+  #user-info
+  .user-menu
+  .user-ward-write
+  .user-write
+  button {
+  padding: 0.5rem 1rem;
+  background-color: #46cfa7;
+  color: white;
+  border: 1px solid #46cfa7;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.board .body .left-bar #user-info .user-menu .user-link button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #46cfa7;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+}
+
 @media only screen and (max-width: 1300px) {
   .container {
     max-width: 1050px;

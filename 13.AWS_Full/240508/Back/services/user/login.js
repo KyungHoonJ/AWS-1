@@ -11,9 +11,9 @@ export default async (req, res) => {
       res.cookie("user", user.id, {
         maxAge: 10 * 60 * 1000,
         httpOnly: true,
-        secure: true,
+        // secure: true,
         signed: true,
-        path: "/",
+        // path: "/",
       });
       res.json({ result: "ok" });
     } else {

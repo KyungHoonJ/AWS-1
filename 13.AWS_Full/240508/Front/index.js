@@ -115,3 +115,52 @@ for (let i = 0; i < 40; i++)
   </div>
 </a>
 </li>`;
+
+const userInfoElem = document.getElementById("user-info");
+(async () => {
+  const user = (
+    await axios({
+      method: "post",
+      url: "http://localhost:8000/user/info",
+      withCredentials: true,
+    })
+  ).data;
+
+  console.log(user.user);
+  if (user.user) {
+    userInfoElem.innerHTML = `<div class="user-level">
+    <div class="level-img">
+      <img src="../imgs/icon-community-lfg.png" alt="" />
+    </div>
+    <div class="name-level">
+      <div class="user-name">${user.user}</div>
+      <div class="user-now-level">레벨 1</div>
+      <div class="user-level-bar"></div>
+      <div class="next-level">다음 레벨까지 11 남음</div>
+    </div>
+  </div>
+  <div class="user-menu">
+    <div class="user-write-comment">
+      <div class="user-writed">
+        <a href="./"><button>내가 쓴 글</button></a>
+      </div>
+      <div class="user-comment">
+        <a href="./"><button>내가 쓴 댓글</button></a>
+      </div>
+    </div>
+    <div class="user-ward-write">
+      <div class="user-ward">
+        <a href="./"><button>내 와드</button></a>
+      </div>
+      <div class="user-write">
+        <a href="./"><button>글 쓰기</button></a>
+      </div>
+    </div>
+    <div class="user-link">
+      <a href="./">
+        <button>게임 계정 연결</button>
+      </a>
+    </div>
+  </div>`;
+  }
+})();

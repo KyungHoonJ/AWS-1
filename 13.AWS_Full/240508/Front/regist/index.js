@@ -34,6 +34,7 @@ registForm.email.oninput = (e) => {
   }
 };
 
+let nowPw;
 registForm.pw.oninput = (e) => {
   const pwReg = /(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]){8,30}/; // RegExp, 정규표현식
   console.log(e.target.value);
@@ -46,7 +47,19 @@ registForm.pw.oninput = (e) => {
     pwResultElem.innerHTML = "비밀번호는 영어, 특수문자, 숫자를 포함하세요.";
   } else {
     isPw = true;
+    nowPw = e.target.value;
     pwResultElem.innerHTML = "";
+  }
+};
+
+registForm["pw-check"].oninput = (e) => {
+  isCheck = false;
+
+  if (e.target.value != nowPw) {
+    checkResultElem.innerHTML = "비밀번호를 확인해주세요.";
+  } else {
+    isCheck = true;
+    checkResultElem.innerHTML = "";
   }
 };
 
