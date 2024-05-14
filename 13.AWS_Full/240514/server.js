@@ -11,21 +11,21 @@ app.use(cookieParser("test"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 // Store : 저장공간
-app.use(
-  session({
-    resave: true,
-    saveUninitialized: true,
-    secret: "test",
-    name: "user-session", // connect.sid
-    store: new FileStore({
-      reapInterval: 10, // 파일을 10초 뒤에 삭제한다.
-      path: "./test-session",
-    }),
-    cookie: {
-      maxAge: 10 * 1000,
-    },
-  })
-);
+// app.use(
+//   session({
+//     resave: true,
+//     saveUninitialized: true,
+//     secret: "test",
+//     name: "user-session", // connect.sid
+//     store: new FileStore({
+//       reapInterval: 10, // 파일을 10초 뒤에 삭제한다.
+//       path: "./test-session",
+//     }),
+//     cookie: {
+//       maxAge: 10 * 1000,
+//     },
+//   })
+// );
 
 app.use(router);
 
