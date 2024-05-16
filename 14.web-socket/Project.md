@@ -75,3 +75,10 @@
 - ERD
 - 일정표
 - 이슈 사항
+
+## 월요일까지
+
+- API 문서
+  - https://docs.google.com/spreadsheets/d/1GRcLpO-HZSC71fKXpvxBKmMysmgOXEs2IEobGpFEe3g/edit?usp=sharing
+- ERD
+- 일정표
