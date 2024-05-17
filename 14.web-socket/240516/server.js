@@ -16,44 +16,30 @@ app.use(express.static("public"));
 
 const chat = io.of("chat");
 // app.use('/chat', chat);
+const room = io.of("room");
 chat.on("connection", (client) => {
   console.log("connected chat");
-  // chat.js 파일 내에서 get, post
   client.on("disconnect", () => {
     console.log("client disconnect");
   });
 
   console.log(client.rooms);
-  // Set(1) { 'TllJgx-jMjkGUK4RAAAD' }
-  // const temp = new Set();
-  // console.log(temp);
-  // temp.add(2);
-  // console.log(temp);
-  // temp.add(1);
-  // console.log(temp);
-  // temp.add("1");
-  // console.log(temp);
-  // console.log(new Set([1, 2, 3, 1, 2, 3, 1, 2, 3]));
-  // const tempObj = { a: 1 };
-  // console.log(
-  //   new Set([tempObj, tempObj, tempObj, tempObj, tempObj, tempObj, tempObj])
-  // );
-  // client.rooms.clear();
-  // client.join(1);
-  // console.log(client.rooms);
+  console.log(client.id);
 
   client.on("chat", (data) => {
-    let now = [...client.rooms][0];
+    let now = [...client.rooms][1];
     if (data.room !== now) {
-      client.rooms.clear();
+      client.leave(now);
       client.join(data.room);
       now = data.room;
+      client.emit("chat", { name: data.room, chat: "에 입장했습니다." });
+      client.broadcast
+        .to(now)
+        .emit("chat", { name: data.name, chat: "가 입장했습니다." });
     }
-    console.log(data);
     chat.to(now).emit("chat", data);
-    // chat.to(2).emit("chat", data);
-    // client.leave(1);
-    // iterator
+    client.emit("chat", { name: "나", chat: "채팅을 쳤다" });
+    // io.to(); // 개인 룸에 보낼 수 있음, 개인 룸은 개인 ID를 기반으로 함
   });
 });
 
@@ -70,6 +56,8 @@ io.on("connection", (client) => {
     io.emit("chat", data);
   });
 });
+
+app.set("io", io);
 
 server.listen(8080, () => {
   console.log(8080, "server open");
