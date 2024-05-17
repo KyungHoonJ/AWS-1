@@ -23,19 +23,21 @@
   <body>
     <ul id="messages"></ul>
     <form id="chat" action="">
-      <input type="text" name="name" />
-      <input type="text" name="chat" />
+      <input type="text" name="room" placeholder="room" />
+      <input type="text" name="name" placeholder="name" />
+      <input type="text" name="chat" placeholder="chat" />
       <button class="btn btn-primary">보내기</button>
     </form>
     <script>
       console.log(io);
-      const socket = io("ws://localhost:8080");
+      const socket = io("ws://localhost:8080/chat");
       const msgElem = document.getElementById("messages");
 
       document.forms.chat.onsubmit = (e) => {
         e.preventDefault();
         if (e.target.chat.value) {
           socket.emit("chat", {
+            room: e.target.room.value || 1,
             name: e.target.name.value || "no name",
             chat: e.target.chat.value,
           });
