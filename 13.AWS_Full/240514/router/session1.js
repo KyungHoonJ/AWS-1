@@ -26,6 +26,7 @@ router.get("/set", (req, res) => {
 
 router.get("/get", (req, res) => {
   console.log(req.session);
+  console.log(req.session.id);
   //   if (req.session.user) {
   //     req.session.user = 1;
   //   }

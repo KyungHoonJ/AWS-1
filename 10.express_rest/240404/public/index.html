@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>게시판</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
   </head>
   <body>
     <form action="/write?id=1" method="post" enctype="multipart/form-data">
@@ -12,6 +13,16 @@
       <button>upload</button>
     </form>
     <div id="preview"></div>
+    <div id="editor"></div>
+    <script>
+      ClassicEditor.create(document.querySelector("#editor"), {
+        ckfinder: {
+          uploadUrl: "/upload",
+        },
+      }).catch((error) => {
+        console.error(error);
+      });
+    </script>
     <script>
       function createElement(name) {
         return document.createElement(name);

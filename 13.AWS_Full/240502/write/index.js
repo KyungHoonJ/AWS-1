@@ -99,6 +99,10 @@ tempArr.forEach((item, idx) => {
     (cateListElem.innerHTML += `<option value="${idx}">${item.name}</option>`);
 });
 
-ClassicEditor.create(document.querySelector("#editor")).catch((error) => {
+ClassicEditor.create(document.querySelector("#editor"), {
+  simpleUpload: {
+    uploadUrl: "http://localhost:3000/image",
+  },
+}).catch((error) => {
   console.error(error);
 });

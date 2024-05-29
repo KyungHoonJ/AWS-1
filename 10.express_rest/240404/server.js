@@ -50,6 +50,22 @@ app.post("/write", upload.array("img"), (req, res) => {
   res.redirect("/");
 });
 
+app.post("/upload", upload.array("upload"), (req, res) => {
+  // const file = req.file;
+  // const fileUrl = `http://localhost:8000/imgs/${file.filename}`;
+  const files = req.files;
+  const fileUrls = [];
+  files.forEach((item) => {
+    fileUrls.push(`/imgs/${item.filename}`);
+  });
+
+  res.json({
+    uploaded: true,
+    // url: fileUrl,
+    urls: fileUrls,
+  });
+});
+
 app.listen(process.env.PORT, () => {
   console.log(`${process.env.PORT} server open`);
 });
