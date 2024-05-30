@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>게시판</title>
     <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <form action="/write?id=1" method="post" enctype="multipart/form-data">
@@ -45,6 +46,27 @@
           //   parentElem.append(temp);
           //   parentElem.append(createImgElement(URL.createObjectURL(file)));
         });
+      };
+    </script>
+    <form action="" id="axios-test">
+      <fieldset>
+        <legend>Axios Test</legend>
+        <input type="file" name="imgs" multiple />
+        <button>Send</button>
+      </fieldset>
+    </form>
+    <script>
+      const axiosForm = document.forms["axios-test"];
+      console.log(axiosForm);
+      axiosForm.onsubmit = async (e) => {
+        e.preventDefault();
+        console.log(axiosForm.imgs.files.length);
+        const formData = new FormData();
+        for (let i = 0; i < axiosForm.imgs.files.length; i++) {
+          formData.append("imgs", axiosForm.imgs.files[i]);
+        }
+        const data = (await axios.post("/write", formData)).data;
+        console.log(data);
       };
     </script>
   </body>

@@ -37,7 +37,7 @@ app.use("/write", (req, res, next) => {
 });
 // console.log(upload.array("img").toString());
 // post(path:String, ...callback:Array(function))
-app.post("/write", upload.array("img"), (req, res) => {
+app.post("/write", upload.array("imgs"), (req, res) => {
   if (req.user) {
     //   console.log(req.cookies);
     //   // 1712192472453_dsfarevsr.png
@@ -47,7 +47,20 @@ app.post("/write", upload.array("img"), (req, res) => {
     // console.log(req.files);
     // res.cookie("file", req.file.filename);
   }
-  res.redirect("/");
+  // res.redirect("/");
+
+  const files = req.files;
+  const fileUrls = [];
+  files.forEach((item) => {
+    fileUrls.push(`/imgs/${item.filename}`);
+  });
+  console.log(files);
+
+  res.json({
+    uploaded: true,
+    // url: fileUrl,
+    urls: fileUrls,
+  });
 });
 
 app.post("/upload", upload.array("upload"), (req, res) => {
