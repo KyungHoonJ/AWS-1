@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.flex-box {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header {
+  background-color: #3d414d;
+  height: 3.5rem;
+}
+
+.body {
+  background-color: #eee;
+}
+
+.contents {
+  flex: 1;
+  background-color: white;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  height: 100px;
+}
+
+.right-bar {
+  width: 20rem;
+  height: 100px;
+  background-color: aqua;
+}
+
+.footer {
+  border-top: 1px solid lightgray;
+}

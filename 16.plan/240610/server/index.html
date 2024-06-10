@@ -1,0 +1,52 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리스트 class</title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+      class MyElement {
+        element;
+        constructor(parent, tag) {
+          this.element = document.createElement(tag);
+          parent.append(this.element);
+        }
+      }
+
+      class Item extends MyElement {
+        constructor(parent, text) {
+          super(parent, "li"); // == MyElement(parent, "li")
+          this.element.innerHTML = text;
+        }
+      }
+
+      class DivElement extends MyElement {
+        constructor(parent, text) {
+          super(parent, "div"); // == MyElement(parent, "li")
+          this.element.innerHTML = text;
+        }
+      }
+
+      const olElem = new MyElement(document.body, "ol");
+      new Item(olElem.element, "1");
+      new Item(olElem.element, "2");
+      new Item(olElem.element, "3");
+      new Item(olElem.element, "4");
+
+      const divElem = new DivElement(document.body, "hello?");
+      const divElem1 = new DivElement(divElem.element, "hello1");
+
+      const ulElem = document.getElementsByTagName("ul")[0];
+      new Item(ulElem, "1");
+      new Item(ulElem, "2");
+      new Item(ulElem, "3");
+      new Item(ulElem, "4");
+
+      function createDiv() {
+        return document.createElement("div");
+      }
+    </script>
+  </body>
+</html>
