@@ -1,8 +1,9 @@
 class MyElem {
   element;
-  constructor({ tag, classList = [], parent = undefined }) {
+  constructor({ tag, classList = [], parent, innerHTML }) {
     this.element = document.createElement(tag);
     this.element.classList.add(...classList);
+    this.element.innerHTML = innerHTML || "";
     if (parent) {
       parent.append(this.element);
     } else {
@@ -17,8 +18,7 @@ class MyElem {
 
 class DivElem extends MyElem {
   constructor({ classList, parent, innerHTML }) {
-    super({ tag: "div", classList, parent });
-    this.element.innerHTML = innerHTML || "";
+    super({ tag: "div", classList, parent, innerHTML });
   }
 }
 
@@ -37,5 +37,35 @@ class Container extends MyElem {
       parent,
     });
     this.element.classList.add("container");
+  }
+}
+
+class ChannelBtn extends MyElem {
+  constructor({ name, btns = [], parent }) {
+    super({ tag: "div", classList: ["channel-btn"], parent });
+    const btn = new MyElem({
+      tag: "h4",
+      classList: [],
+      parent: this,
+      innerHTML: name,
+    });
+
+    const channelBtns = new MyElem({
+      tag: "ul",
+      classList: ["channel-btns"],
+      parent: this,
+    });
+
+    btn.element.onclick = () => {
+      const temp = parent.element.getElementsByClassName("on");
+      if (temp.length && temp[0] !== channelBtns.element) {
+        temp[0].classList.remove("on");
+      }
+      channelBtns.element.classList.toggle("on");
+    };
+
+    btns.forEach(({ name, id }) => {
+      new MyElem({ tag: "li", parent: channelBtns, innerHTML: name });
+    });
   }
 }
