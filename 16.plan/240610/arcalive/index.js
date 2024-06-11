@@ -55,6 +55,8 @@ class Row {
   }
 }
 
+// new Row({list : axios.post().data})
+
 document.getElementsByClassName("contents")[0].append(
   new Row({
     list: [

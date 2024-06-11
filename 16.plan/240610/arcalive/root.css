@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.flex-box {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
