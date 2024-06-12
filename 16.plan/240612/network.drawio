@@ -1,0 +1,176 @@
+<mxfile host="app.diagrams.net" modified="2024-06-12T02:10:11.861Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="YpWm9MKpALFn7Flu6WBu" version="24.5.2" type="device">
+  <diagram name="페이지-1" id="IzrHYI5sSQail3mEcHFB">
+    <mxGraphModel dx="355" dy="190" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-1" target="Rycm1ArM-xXLczLpoNVL-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-4" value="&lt;span style=&quot;font-size: 12px; text-wrap: wrap; background-color: rgb(251, 251, 251);&quot;&gt;l&lt;/span&gt;&lt;span style=&quot;background-color: rgb(251, 251, 251); font-size: 12px; text-wrap: wrap;&quot;&gt;ocalhost&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Rycm1ArM-xXLczLpoNVL-3">
+          <mxGeometry x="-0.1333" relative="1" as="geometry">
+            <mxPoint x="5" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-1" value="&lt;div&gt;클라이언트&lt;/div&gt;브라우저" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-2" target="Rycm1ArM-xXLczLpoNVL-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-2" value="127.0.0.1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-5" target="Rycm1ArM-xXLczLpoNVL-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-5" value="내 컴퓨터 내에서 80 port를 찾는다." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-7" target="Rycm1ArM-xXLczLpoNVL-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-7" value="요청 데이터를 보낸다." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-9" target="Rycm1ArM-xXLczLpoNVL-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-9" value="80 port를 사용중인 process가 데이터를 받는다." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-12" value="&lt;div&gt;클라이언트???&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-14" target="Rycm1ArM-xXLczLpoNVL-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-14" value="클라우드 서비스&lt;div&gt;인스턴스(EC2)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="520" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-91" value="Auto Scaling&lt;div&gt;인스턴스의 자동 조절&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-92" value="&lt;div&gt;클라이언트???&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-93" target="Rycm1ArM-xXLczLpoNVL-131">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-143" value="IP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Rycm1ArM-xXLczLpoNVL-132">
+          <mxGeometry x="0.0067" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-141" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-93" target="Rycm1ArM-xXLczLpoNVL-140">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-144" value="도메인(naver.com)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Rycm1ArM-xXLczLpoNVL-141">
+          <mxGeometry x="-0.4542" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-93" value="&lt;div&gt;클라이언트???&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-105" value="클라우드 서비스&lt;div&gt;인스턴스(EC2)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="520" width="480" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-106" value="&lt;div&gt;BackEnd Server&lt;/div&gt;Node.js&lt;div&gt;Express&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-107" value="&lt;div&gt;FrontEnd Server&lt;/div&gt;NginX&lt;div&gt;HTML&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="640" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-108" value="Database&lt;div&gt;mySQL || MongoDB&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="760" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-109" value="&lt;div&gt;File Server&lt;/div&gt;사용자가 올린 파일" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="880" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" target="Rycm1ArM-xXLczLpoNVL-112">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="320" as="targetPoint" />
+            <mxPoint x="640" y="355" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="720" y="355" />
+              <mxPoint x="720" y="295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" target="Rycm1ArM-xXLczLpoNVL-113">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="355" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-112" target="Rycm1ArM-xXLczLpoNVL-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-112">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="385" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="760" y="325" />
+              <mxPoint x="760" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-112" value="클라우드 서비스&lt;div&gt;인스턴스(EC2)&lt;/div&gt;&lt;div&gt;mySQL&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="840" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-113">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-113" value="클라우드 서비스&lt;div&gt;인스턴스(EC2)&lt;/div&gt;&lt;div&gt;File Server&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="840" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-121" target="Rycm1ArM-xXLczLpoNVL-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-126" value="클라우드 서비스&lt;div&gt;인스턴스(EC2)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-131" target="Rycm1ArM-xXLczLpoNVL-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-131" target="Rycm1ArM-xXLczLpoNVL-126">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-131" value="Load Banlancer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-135" value="AMI" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="140" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-121" value="클라우드 서비스&lt;div&gt;인스턴스(EC2)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="Rycm1ArM-xXLczLpoNVL-135">
+          <mxGeometry x="20" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-136" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Auto Scaling&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="250" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-137" value="&lt;div&gt;FrontEnd Server&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;HTML, CSS, JS&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="580" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-138" value="Web Hosting&lt;div&gt;(Cafe24)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-139" value="Github Pages" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Rycm1ArM-xXLczLpoNVL-140" target="Rycm1ArM-xXLczLpoNVL-131">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-145" value="IP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Rycm1ArM-xXLczLpoNVL-142">
+          <mxGeometry x="0.3956" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Rycm1ArM-xXLczLpoNVL-140" value="Domain Name Server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

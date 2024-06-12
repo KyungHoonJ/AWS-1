@@ -34,6 +34,14 @@ new ChannelBtn({
   btns: [{ name: "붕괴 채널" }, { name: "오늘 점심 채널" }],
   parent: menuElem,
 });
+{
+  // Nest.js << Typescript
+  /* <div>
+  <ChannelBtn>
+    <li>붕괴채널</li>
+  </ChannelBtn>
+</div> */
+}
 // const primaryElem = new DivElem({
 //   innerHTML: "주요 채널",
 //   parent: menuElem,

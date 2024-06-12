@@ -303,3 +303,9 @@ const channel = new Channel({
 });
 
 document.getElementsByClassName("contents")[0].append(channel.element);
+
+axios
+  .get("https://upload3.inven.co.kr/upload/2024/06/01/bbs/i1755452665.jpg")
+  .then((data) => {
+    console.log(data);
+  });
