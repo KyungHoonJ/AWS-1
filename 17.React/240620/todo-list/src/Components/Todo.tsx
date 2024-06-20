@@ -9,21 +9,28 @@ interface IProps {
   item: ITodo;
   id: string;
   complete(): void;
+  remove(): void;
 }
 
 interface IState {}
 
 class Todo extends Component<IProps, IState> {
+  static STYLE: string = "flex justify-between items-center";
   componentDidMount(): void {
     console.log(this.props);
   }
 
   render(): ReactNode {
+    const {
+      id,
+      item: { content, isComplete },
+      complete,
+      remove,
+    } = this.props;
     return (
       <div
         className={[
-          "flex justify-between",
-          "items-center",
+          Todo.STYLE,
           "gap-2",
           "p-1",
           "border-b",
@@ -31,9 +38,9 @@ class Todo extends Component<IProps, IState> {
           "border-black",
         ].join(" ")}
       >
-        <div className="flex-1">{this.props.item.content}</div>
+        <div className="flex-1">{content}</div>
         <label
-          htmlFor={this.props.id}
+          htmlFor={id}
           className={[
             "border",
             "border-gray-400",
@@ -45,16 +52,19 @@ class Todo extends Component<IProps, IState> {
             "select-none", // user-select: none;
           ].join(" ")}
         >
-          완료
+          {isComplete ? "완료" : "진행중"}
           <input
-            id={this.props.id}
+            id={id}
             className="hidden"
             type="checkbox"
-            checked={this.props.item.isComplete}
-            onChange={this.props.complete}
+            checked={isComplete}
+            onChange={complete}
           />
         </label>
-        <button className="border border-gray-400 rounded bg-gray-200 p-1 px-2 select-none">
+        <button
+          className="border border-gray-400 rounded bg-gray-200 p-1 px-2 select-none"
+          onClick={remove}
+        >
           삭제
         </button>
       </div>
