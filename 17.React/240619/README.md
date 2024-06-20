@@ -29,3 +29,12 @@ npm i sass # npm i scss
 npm i tailwindcss
 npx tailwindcss init
 ```
+
+# React without typescript
+
+```bash
+create-react-app todo-list-js
+cd todo-list-js
+npm i tailwindcss
+npx tailwindcss init
+```
