@@ -22,7 +22,13 @@ export default class Add extends Component<IProps, IState> {
 
   render(): ReactNode {
     return (
-      <div className="flex items-center gap-2 p-1 border-b-4 border-black border-double">
+      <form
+        className="flex items-center gap-2 p-1 border-b-4 border-black border-double"
+        onSubmit={(e) => {
+          e.preventDefault();
+          this.add();
+        }}
+      >
         <label htmlFor="todo-content">Todo :</label>
         <input
           className="flex-1 border rounded border-gray-500"
@@ -33,11 +39,11 @@ export default class Add extends Component<IProps, IState> {
             // console.log(value);
             this.setState({ content: value });
           }}
-          onKeyDown={({ key }: KeyboardEvent<HTMLInputElement>) => {
-            if (key == "Enter") {
-              this.add();
-            }
-          }}
+          //   onKeyUp={({ key }: KeyboardEvent<HTMLInputElement>) => {
+          //     if (key == "Enter") {
+          //         this.add();
+          //     }
+          //   }}
         />
         <button
           className={[
@@ -46,13 +52,14 @@ export default class Add extends Component<IProps, IState> {
             "rounded",
             "p-1",
             "px-5",
+            "bg-blue",
             "select-none", // user-select: none;
           ].join(" ")}
-          onClick={this.add}
+          //   onClick={this.add}
         >
           추가
         </button>
-      </div>
+      </form>
     );
   }
 }
