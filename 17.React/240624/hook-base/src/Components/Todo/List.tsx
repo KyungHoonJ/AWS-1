@@ -1,13 +1,11 @@
 import { FC } from "react";
 import { Todo as TodoItem } from "../../lib/Todo";
 import Item from "./Item";
+import { ITodoProps } from "./Todo";
 
-export interface IProps {
-  list: Array<TodoItem>;
-  complete(idx: number): void;
-}
+export interface IProps extends ITodoProps {}
 
-const List: FC<IProps> = ({ list, complete }) => {
+const List: FC<IProps> = ({ list, complete, removeItem }) => {
   return (
     <div>
       {list
@@ -18,6 +16,7 @@ const List: FC<IProps> = ({ list, complete }) => {
             item={item}
             idx={idx}
             complete={() => complete(idx)}
+            removeItem={() => removeItem(idx)}
           />
         ))}
     </div>

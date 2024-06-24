@@ -28,7 +28,30 @@ const Todo: FC<IProps> = ({}) => {
     // complete 메서드가 초기화되는 시기 언제? => Mount
   }, []);
 
-  return <TodoComp list={list} complete={complete} />;
+  const removeItem = useCallback((idx: number) => {
+    setList((list: TodoItem[]) => {
+      return list.filter((_, i: number) => i != idx);
+    });
+  }, []);
+
+  const addItem = useCallback(
+    (content: string, priority: number, limit: string) => {
+      setList((list: TodoItem[]) => [
+        ...list,
+        new TodoItem(content, priority, limit),
+      ]);
+    },
+    []
+  );
+
+  return (
+    <TodoComp
+      list={list}
+      complete={complete}
+      removeItem={removeItem}
+      addItem={addItem}
+    />
+  );
 };
 
 export default Todo;
