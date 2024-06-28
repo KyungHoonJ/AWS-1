@@ -10,8 +10,11 @@ const Item = <T,>({
   return (
     <li>
       <ul className="flex justify-between">
-        {titleList.map(({ key }: ITitle<T>, idx: number) => (
-          <li key={`item-${idx}`}>{`${item[key]}`}</li>
+        {titleList.map(({ key, isStrech }: ITitle<T>, idx: number) => (
+          <li
+            key={`item-${idx}`}
+            className={`w-16 truncate ${isStrech ? "flex-1" : "text-center"}`}
+          >{`${item[key]}`}</li>
         ))}
       </ul>
     </li>
