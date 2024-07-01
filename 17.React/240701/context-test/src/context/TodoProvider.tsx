@@ -2,6 +2,7 @@ import {
   Dispatch,
   ReactNode,
   createContext,
+  useCallback,
   useContext,
   useReducer,
 } from "react";
@@ -29,7 +30,8 @@ const initialState: TodoListState = {
 type Action =
   | {
       type: "ADDTODO";
-      payload: Todo; //데이터?
+      // payload: Todo; //데이터?
+      payload: { title: string; content: string }; //데이터?
     }
   | {
       type: "REMOVETODO";
@@ -45,10 +47,18 @@ type Action =
 //   payload: Todo;
 // }
 
+let nowId = 0;
 const reducer = (state: TodoListState, action: Action): TodoListState => {
   switch (action.type) {
     case "ADDTODO":
-      return { ...state, todoList: [...state.todoList, action.payload] };
+      nowId++;
+      return {
+        ...state,
+        todoList: [
+          ...state.todoList,
+          { ...action.payload, id: nowId, isComplete: false },
+        ],
+      };
     //   break;
     case "REMOVETODO":
       return {
@@ -94,6 +104,7 @@ const reducer = (state: TodoListState, action: Action): TodoListState => {
 interface TodoContextProps {
   state: TodoListState;
   dispatch: Dispatch<Action>;
+  toggle: (id: number) => void;
 }
 
 const TodoContext = createContext<TodoContextProps | undefined>(undefined);
@@ -104,9 +115,12 @@ export const TodoProvider = ({
   children: ReactNode;
 }): JSX.Element => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const toggle = useCallback((id: number) => {
+    dispatch({ type: "TOGGLETODO", payload: { id } });
+  }, []);
 
   return (
-    <TodoContext.Provider value={{ state, dispatch }}>
+    <TodoContext.Provider value={{ state, dispatch, toggle }}>
       {children}
     </TodoContext.Provider>
   );

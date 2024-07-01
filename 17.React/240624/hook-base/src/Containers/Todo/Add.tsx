@@ -12,6 +12,7 @@ const Add: FC<IProps> = ({ addItem }) => {
 
   const changeContent = useCallback(
     ({ target: { value } }: ChangeEvent<HTMLInputElement>): void => {
+      console.log(content, priority, limit);
       setContent(value);
     },
     []

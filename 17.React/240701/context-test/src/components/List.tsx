@@ -1,5 +1,17 @@
+import { useTodoContext } from "../context/TodoProvider";
+import Item from "./Item";
+
 const List = (): JSX.Element => {
-  return <div></div>;
+  const {
+    state: { todoList },
+  } = useTodoContext();
+  return (
+    <div>
+      {todoList.map((_, idx: number) => (
+        <Item key={idx} idx={idx} />
+      ))}
+    </div>
+  );
 };
 
 export default List;
