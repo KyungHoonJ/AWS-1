@@ -36,6 +36,12 @@ const App = (): JSX.Element => {
 
   return (
     <div>
+      <h1>과제</h1>
+      <h2>Todo List 관련 BackEnd 서버 구현</h2>
+      <h2>DB에 추가, 삭제, 수정</h2>
+      <h2>Todo 추가, 삭제, 완료</h2>
+      <h2>List 페이징(10 / 1p)</h2>
+      <h2>path는 알아서(기능은 모두 구현되어야함)</h2>
       <button onClick={changeFilter}>{filter}</button> : {listCount}
       <div>
         {list.map((item) => (

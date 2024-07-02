@@ -32,7 +32,7 @@ export interface ITodo {
 
 // atom : state
 export const todoListState = atom<ITodo[]>({
-  key: "todoList",
+  key: "todoListState",
   default: [],
 });
 // initialState
@@ -45,8 +45,18 @@ const todoFilterState = atom<string>({
 
 export const todoList = selector<ITodo[]>({
   key: "todoList",
-  get: ({}) => {
-    return [];
+  get: ({ get }) => {
+    const list = get(todoListState);
+    const filter = get(todoFilter);
+    switch (filter) {
+      case "complete":
+        return list.filter((item) => item.isComplete);
+      case "progress":
+        return list.filter((item) => !item.isComplete);
+      case "all":
+      default:
+        return list;
+    }
   },
 });
 
