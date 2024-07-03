@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "ts_todo",
+    "password": "1234QWer!@",
+    "database": "todo_list",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
