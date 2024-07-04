@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { Todo } from "../models";
 
 export const getList = async (req: Request, res: Response) => {
+  console.log(new Date());
   try {
     let { page } = req.params;
     if (!page) page = "1";
@@ -14,6 +15,7 @@ export const getList = async (req: Request, res: Response) => {
 };
 
 export const addTodo = async (req: Request, res: Response) => {
+  console.log(new Date());
   try {
     const { content } = req.body;
     const todo = await Todo.create({ content });

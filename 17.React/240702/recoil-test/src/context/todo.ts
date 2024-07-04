@@ -1,3 +1,4 @@
+import axios from "axios";
 import { atom, selector } from "recoil";
 
 export interface ITodo {
@@ -86,5 +87,14 @@ export const todoFilter = selector<string>({
   },
   set: ({ set }, value = "all") => {
     set(todoFilterState, value);
+  },
+});
+
+export const getServerList = selector<ITodo[]>({
+  key: "getServerList",
+  get: async () => {
+    const { data } = await axios.get("http://localhost:8001/api/todo/1");
+    console.log(data);
+    return data;
   },
 });
