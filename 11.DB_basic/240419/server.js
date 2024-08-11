@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
 });
 
 connection.connect();
-// ALTER USER aws IDENTIFIED WITH mysql_native_password BY '1234qwER!@';
+// ALTER USER aws IDENTIFIED WITH ive_password BY '1234qwER!@';
 
 // connection.query("SHOW TABLES", (err, results, fields) => {
 //   console.log("err : ", err);
