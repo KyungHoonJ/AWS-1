@@ -33,4 +33,53 @@ describe("Test Todo", () => {
       errorMsg: "plz input title",
     });
   });
+
+  test("Test Get List", async () => {
+    const response = await request(app).get("/todo");
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual([
+      {
+        id: 1,
+        title: "test todo list",
+        isCompleted: false,
+      },
+    ]);
+  });
+
+  test("Test Update Todo Item", async () => {
+    const response = await request(app)
+      .patch("/todo")
+      .send({ id: 1, isCompleted: true });
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({
+      id: 1,
+      title: "test todo list",
+      isCompleted: true,
+    });
+  });
+
+  test("Test Delete Todo Item", async () => {
+    const response = await request(app).delete("/todo/1");
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual([]);
+  });
+
+  test("Test Add Todo Items", async () => {
+    await request(app).post("/todo").send({ title: "test todo list" });
+    await request(app).post("/todo").send({ title: "test todo list" });
+    const response = await request(app).get("/todo");
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual([
+      {
+        id: 2,
+        title: "test todo list",
+        isCompleted: false,
+      },
+      {
+        id: 3,
+        title: "test todo list",
+        isCompleted: false,
+      },
+    ]);
+  });
 });
