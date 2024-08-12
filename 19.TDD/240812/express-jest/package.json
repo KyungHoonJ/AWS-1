@@ -1,0 +1,29 @@
+{
+  "name": "express-jest",
+  "version": "1.0.0",
+  "description": "```bash\r npm init -y\r npm i express\r npm i -D typescript ts-node @types/node @types/express jest ts-jest @types/jest\r npx tsx --init\r ```",
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "start": "nodemon ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.2.0",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
