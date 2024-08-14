@@ -1,20 +1,24 @@
-interface Todo {
-  id: number;
-  title: string;
-  isCompleted: boolean;
-}
+import Todo from "../models/Todo";
+
+// interface Todo {
+//   id: number;
+//   title: string;
+//   isCompleted: boolean;
+// }
 
 let todoList: Todo[] = [];
 let todoId = 1;
 
-export const add = (title: string) => {
+export const add = async (title: string) => {
   if (title?.length) {
-    todoList.push({
-      id: todoId++,
-      title,
-      isCompleted: false,
-    });
-    return todoList[todoList.length - 1];
+    const todo = await Todo.create({ title });
+    return todo;
+    // todoList.push({
+    //   id: todoId++,
+    //   title,
+    //   isCompleted: false,
+    // });
+    // return todoList[todoList.length - 1];
   } else {
     throw new Error("plz input title");
   }

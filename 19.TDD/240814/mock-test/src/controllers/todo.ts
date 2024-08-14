@@ -3,9 +3,9 @@ import { add, deleteTodo, getList, patchTodo } from "../services/todo";
 
 const router = Router();
 
-router.post("/", (req: Request, res: Response) => {
+router.post("/", async (req: Request, res: Response) => {
   try {
-    const todo = add(req.body.title);
+    const todo = await add(req.body.title);
     res.status(201).json(todo);
   } catch (error) {
     const err = error instanceof Error ? error : new Error(`${error}`);

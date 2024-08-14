@@ -2,9 +2,10 @@
   "name": "mock-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch",
+    "start": "nodemon ./src/index.ts"
   },
   "keywords": [],
   "author": "",
