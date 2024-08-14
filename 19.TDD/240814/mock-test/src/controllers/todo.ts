@@ -13,13 +13,13 @@ router.post("/", async (req: Request, res: Response) => {
   }
 });
 
-router.get("/", (req: Request, res: Response) => {
-  res.status(200).json(getList());
+router.get("/", async (req: Request, res: Response) => {
+  res.status(200).json(await getList());
 });
 
-router.patch("/", (req: Request, res: Response) => {
+router.patch("/", async (req: Request, res: Response) => {
   try {
-    const todo = patchTodo(req.body);
+    const todo = await patchTodo(req.body);
     res.status(200).json(todo);
   } catch (error) {
     const err = error instanceof Error ? error : new Error(`${error}`);
@@ -27,9 +27,9 @@ router.patch("/", (req: Request, res: Response) => {
   }
 });
 
-router.delete("/:id", (req: Request, res: Response) => {
+router.delete("/:id", async (req: Request, res: Response) => {
   try {
-    const todo = deleteTodo(+req.params.id);
+    const todo = await deleteTodo(+req.params.id);
     res.status(200).json(todo);
   } catch (error) {
     const err = error instanceof Error ? error : new Error(`${error}`);
