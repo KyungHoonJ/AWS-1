@@ -10,6 +10,10 @@ const client = new QueryClient();
 
 describe("Test Todo List", () => {
   beforeEach(() => {
+    const data = { id: 1, title: "test todo list", isCompleted: false };
+    mock.onGet("/todo").reply(200, [data]);
+    mock.onPost("/todo", {}).reply(200, { title: "test todo list" });
+
     render(
       <QueryClientProvider client={client}>
         <TodoList />
@@ -18,10 +22,6 @@ describe("Test Todo List", () => {
   });
 
   test("Render Todo List", async () => {
-    const data = [{ id: 1, title: "test todo list", isCompleted: false }];
-    mock.onGet("/todo").reply(200, data);
-
-    // render(<TodoList />);
     const titleElem = screen.getByText(/now Loading/i);
     expect(titleElem).toBeInTheDocument();
     expect(titleElem.tagName).toBe("DIV");
@@ -32,36 +32,48 @@ describe("Test Todo List", () => {
     expect(screen.getByText(/test todo list/i)).toBeInTheDocument();
   });
 
-  // test("Include Input Element", () => {
-  //   // render(<TodoList />);
-  //   const inputElem = screen.getByRole("textbox");
-  //   expect(inputElem).toBeInTheDocument();
-  // });
+  test("Include Input Element", async () => {
+    await waitFor(() => {
+      expect(screen.getByText("Todo List")).toBeInTheDocument();
+    });
+    const inputElem = screen.getByRole("textbox");
+    expect(inputElem).toBeInTheDocument();
+  });
 
-  // test("Input Text", () => {
-  //   // render(<TodoList />);
-  //   const inputElem: HTMLInputElement = screen.getByRole("textbox");
-  //   fireEvent.change(inputElem, { target: { value: "input test" } });
-  //   expect(inputElem.value).toEqual("input test");
-  // });
+  test("Input Text", async () => {
+    await waitFor(() => {
+      expect(screen.getByText("Todo List")).toBeInTheDocument();
+    });
+    const inputElem: HTMLInputElement = screen.getByRole("textbox");
+    fireEvent.change(inputElem, { target: { value: "input test" } });
+    expect(inputElem.value).toEqual("input test");
+  });
 
-  // test("Include Add Button", () => {
-  //   const buttonElem = screen.getByRole("button", { name: "Add Todo" });
-  //   expect(buttonElem).toBeInTheDocument();
-  // });
+  test("Include Add Button", () => {
+    const buttonElem = screen.getByRole("button", { name: "Add Todo" });
+    expect(buttonElem).toBeInTheDocument();
+  });
 
-  // test("Add New Todo", () => {
-  //   // 작성해보자
-  //   const inputElem: HTMLInputElement = screen.getByRole("textbox");
-  //   fireEvent.change(inputElem, { target: { value: "first Todo" } });
-  //   const buttonElem = screen.getByRole("button", { name: "Add Todo" });
-  //   fireEvent.click(buttonElem);
+  test("Add New Todo", async () => {
+    // 작성해보자
+    const data = { id: 1, title: "test todo list", isCompleted: false };
+    mock
+      .onGet("/todo")
+      .reply(200, [data, { id: 1, title: "first Todo", isCompleted: false }]);
 
-  //   const listItemElem = screen.getByText("first Todo");
-  //   expect(listItemElem).toBeInTheDocument();
-  //   expect(listItemElem.tagName).toBe("LI");
+    await waitFor(() => {
+      expect(screen.getByText("Todo List")).toBeInTheDocument();
+    });
+    const inputElem: HTMLInputElement = screen.getByRole("textbox");
+    fireEvent.change(inputElem, { target: { value: "first Todo" } });
+    const buttonElem = screen.getByRole("button", { name: "Add Todo" });
+    fireEvent.click(buttonElem);
 
-  //   const listItemElem2 = screen.getByRole("listitem");
-  //   expect(listItemElem2).toHaveTextContent("first Todo");
-  // });
+    await waitFor(() => {
+      expect(screen.getByText("first Todo")).toBeInTheDocument();
+    });
+    const listItemElem = screen.getByText("first Todo");
+    expect(listItemElem).toBeInTheDocument();
+    expect(listItemElem.tagName).toBe("LI");
+  });
 });
