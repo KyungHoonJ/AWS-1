@@ -12,7 +12,7 @@ describe("Test Todo List", () => {
   beforeEach(() => {
     const data = { id: 1, title: "test todo list", isCompleted: false };
     mock.onGet("/todo").reply(200, [data]);
-    mock.onPost("/todo", {}).reply(200, { title: "test todo list" });
+    mock.onPost("/todo", { title: "test todo list" }).reply(200, data);
 
     render(
       <QueryClientProvider client={client}>
@@ -65,13 +65,17 @@ describe("Test Todo List", () => {
       expect(screen.getByText("Todo List")).toBeInTheDocument();
     });
     const inputElem: HTMLInputElement = screen.getByRole("textbox");
-    fireEvent.change(inputElem, { target: { value: "first Todo" } });
+    fireEvent.change(inputElem, { target: { value: "test todo list" } });
     const buttonElem = screen.getByRole("button", { name: "Add Todo" });
     fireEvent.click(buttonElem);
 
     await waitFor(() => {
-      expect(screen.getByText("first Todo")).toBeInTheDocument();
+      expect(screen.getByText("Todo List")).toBeInTheDocument();
+      expect((screen.getByRole("textbox") as HTMLInputElement).value).toEqual(
+        ""
+      );
     });
+
     const listItemElem = screen.getByText("first Todo");
     expect(listItemElem).toBeInTheDocument();
     expect(listItemElem.tagName).toBe("LI");
